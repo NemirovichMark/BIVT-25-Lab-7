@@ -8,7 +8,7 @@
             const int JudmentsTotal = 5;
 
             readonly string name = name, surname = surname;
-            int[,] marks = new int[JumpsTotal, JudmentsTotal];
+            readonly int[,] marks = new int[JumpsTotal, JudmentsTotal];
             int jumps_done = 0;
 
             public readonly string Name => name;
