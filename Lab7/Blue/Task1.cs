@@ -4,14 +4,12 @@
     {
         public struct Response
         {
-            // Война и мир в 7 словах: Зачем писать private, если он по умолчанию?
-
-            string name, surname;
+            string name, surname; // Война и мир в 7 словах: Зачем писать private, если он по умолчанию?
             int votes = 0; // Имеют ли смысл отрицательные голоса?
 
             public readonly string Name => name;
             public readonly string Surname => surname;
-            public readonly int Votes => votes;
+            public readonly int Votes => votes; // readonly защищает от взятия ссылки?
 
             public Response(string name, string surname)
             {
@@ -32,7 +30,8 @@
                 return this.votes;
             }
 
-            public void Print() => Console.WriteLine($"Response{{name: \"{name}\", surname: \"{surname}\", votes: {votes}}}");
+            public void Print() => Console.WriteLine($"Response{{name: \"{name}\", surname: \"{surname}\", votes: {votes}}}"); // 0 refs -- Я никому не Ужин
+
             bool Same(Response other) => this.name == other.name && this.surname == other.surname;
         }
     }
