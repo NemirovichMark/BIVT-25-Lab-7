@@ -29,11 +29,11 @@
             }
         }
 
-        public struct Participant
+        public struct Participant(string name, string surname)
         {
             const int expelled_value = 10;
 
-            readonly string name, surname;
+            readonly string name = name, surname = surname;
             DynamicArrayList penalties = new();
 
             public readonly string Name => name;
@@ -41,12 +41,6 @@
             public readonly int[] PenaltyTimes => penalties.View;
             public readonly int TotalTime => penalties.Sum();
             public readonly bool IsExpelled => penalties.Has(expelled_value);
-
-            public Participant(string name, string surname)
-            {
-                this.name = name;
-                this.surname = surname;
-            }
 
             public void PlayMatch(int time)
             {
@@ -72,7 +66,7 @@
 
             public readonly void Print() => Console.WriteLine(ToString());
 
-            override public readonly string ToString() =>
+            override public readonly string ToString() => 
                 $"Participant{{name: \"{name}\", surname: \"{surname}\", totalTime: {TotalTime}, isExpelled: {IsExpelled}}}";
         }
     }
