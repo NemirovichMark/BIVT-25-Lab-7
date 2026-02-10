@@ -2,62 +2,20 @@
 {
     public class Task3
     {
-        public struct Participant
+        struct DynamicArrayList
         {
-            readonly string name, surname;
-            int[] penalties_buffer;
-            int penalties_len;
+            int[] penalties_buffer = [];
+            int penalties_len = 0;
 
-            public readonly string Name => name;
-            public readonly string Surname => surname;
-            public readonly int[] PenaltyTimes => ListView;
+            public DynamicArrayList() { }
 
-            readonly int[] ListView => (int[])penalties_buffer.Clone();
+            public readonly bool ListHas(int search_target) => penalties_buffer.Any((item) => item == search_target);
 
-            public readonly int TotalTime
-            {
-                get
-                {
-                    int sum = 0;
-                    for (int i = 0; i < penalties_len; i += 1)
-                    {
-                        sum += penalties_buffer[i];
-                    }
+            public readonly int[] ListView => (int[])penalties_buffer.Clone();
 
-                    return sum;
-                }
-            }
+            public readonly int ListSum() => penalties_buffer.Sum();
 
-            public readonly bool IsExpelled
-            {
-                get
-                {
-                    for (int i = 0; i < penalties_len; i += 1)
-                    {
-                        if (penalties_buffer[i] == 10)
-                        {
-                            return true;
-                        }
-                    }
-
-                    return false;
-                }
-            }
-
-            public Participant(string name, string surname)
-            {
-                this.name = name;
-                this.surname = surname;
-                this.penalties_buffer = []; // пустой массив, будет расширяться
-                this.penalties_len = 0;
-            }
-
-            public void PlayMatch(int time)
-            {
-                if (time >= 0) { ListAdd(time); }
-            }
-
-            void ListAdd(int i)
+            public void ListAdd(int i)
             {
                 var new_len = penalties_len + 1;
                 var new_buffer = new int[new_len];
@@ -69,6 +27,29 @@
                 new_buffer[penalties_len] = i;
                 penalties_buffer = new_buffer;
                 penalties_len += 1;
+            }
+        }
+
+        public struct Participant
+        {
+            readonly string name, surname;
+            DynamicArrayList penalties = new();
+
+            public readonly string Name => name;
+            public readonly string Surname => surname;
+            public readonly int[] PenaltyTimes => penalties.ListView;
+            public readonly int TotalTime => penalties.ListSum();
+            public readonly bool IsExpelled => penalties.ListHas(10);
+
+            public Participant(string name, string surname)
+            {
+                this.name = name;
+                this.surname = surname;
+            }
+
+            public void PlayMatch(int time)
+            {
+                if (time >= 0) { penalties.ListAdd(time); }
             }
 
             public static void Sort(Participant[] array)
