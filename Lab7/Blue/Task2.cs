@@ -18,11 +18,9 @@
 
             public void Jump(int[] result)
             {
-                if (IsResultDestinationValid(result) && CanJump)
-                {
-                    for (int i = 0; i < JudmentsTotal; i += 1) { this.marks[this.jumps_done, i] = result[i]; }
-                    this.jumps_done += 1;
-                }
+                if (!IsResultDestinationValid(result) || !CanJump) { return; }
+                for (int i = 0; i < JudmentsTotal; i += 1) { this.marks[this.jumps_done, i] = result[i]; }
+                this.jumps_done += 1;
             }
 
             public static void Sort(Participant[] array)
@@ -30,9 +28,11 @@
                 if (array != null) { Array.Sort(array, (l, r) => r.TotalScore.CompareTo(l.TotalScore)); }
             }
 
-            public void Print() => Console.WriteLine($"Participant{{name: \"{name}\", surname: \"{surname}\", TotalScore: {TotalScore}}}");
+            public readonly void Print() => Console.WriteLine(
+                $"Participant{{name: \"{name}\", surname: \"{surname}\", TotalScore: {TotalScore}, CanJump: {CanJump}}}"
+            );
 
-            bool IsResultDestinationValid(int[] result) => result != null && result.Length == JudmentsTotal;
+            static bool IsResultDestinationValid(int[] result) => result != null && result.Length == JudmentsTotal;
 
             readonly bool CanJump => this.jumps_done < JumpsTotal && this.marks != null;
         }
