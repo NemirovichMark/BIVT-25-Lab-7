@@ -9,22 +9,21 @@
 
             public DynamicArrayList() { }
 
-            public readonly bool ListHas(int search_target) => penalties_buffer.Any((item) => item == search_target);
+            public readonly bool Has(int search_target) => penalties_buffer.Any((item) => item == search_target);
 
-            public readonly int[] ListView => (int[])penalties_buffer.Clone();
+            public readonly int[] View => (int[])penalties_buffer.Clone();
 
-            public readonly int ListSum() => penalties_buffer.Sum();
+            public readonly int Sum() => penalties_buffer.Sum();
 
-            public void ListAdd(int i)
+            public void Add(int item)
             {
-                var new_len = penalties_len + 1;
-                var new_buffer = new int[new_len];
+                var new_buffer = new int[penalties_len + 1];
                 if (penalties_len > 0)
                 {
                     Array.Copy(penalties_buffer, new_buffer, penalties_len);
                 }
 
-                new_buffer[penalties_len] = i;
+                new_buffer[penalties_len] = item;
                 penalties_buffer = new_buffer;
                 penalties_len += 1;
             }
@@ -32,14 +31,16 @@
 
         public struct Participant
         {
+            const int expelled_value = 10;
+
             readonly string name, surname;
             DynamicArrayList penalties = new();
 
             public readonly string Name => name;
             public readonly string Surname => surname;
-            public readonly int[] PenaltyTimes => penalties.ListView;
-            public readonly int TotalTime => penalties.ListSum();
-            public readonly bool IsExpelled => penalties.ListHas(10);
+            public readonly int[] PenaltyTimes => penalties.View;
+            public readonly int TotalTime => penalties.Sum();
+            public readonly bool IsExpelled => penalties.Has(expelled_value);
 
             public Participant(string name, string surname)
             {
@@ -49,39 +50,30 @@
 
             public void PlayMatch(int time)
             {
-                if (time >= 0) { penalties.ListAdd(time); }
+                if (time >= 0) { penalties.Add(time); }
             }
 
-            public static void Sort(Participant[] array)
+            public static void Sort(Participant[]? array)
             {
                 if (array == null) { return; }
                 Array.Sort(array, (l, r) =>
                 {
                     // Сначала по возрастанию
-                    int timeCompare = l.TotalTime.CompareTo(r.TotalTime);
-                    if (timeCompare != 0)
-                    {
-                        return timeCompare;
-                    }
+                    var c = l.TotalTime.CompareTo(r.TotalTime);
+                    if (c != 0) { return c; }
 
                     // При равных исключенные идут перед неисключенными
-                    if (l.IsExpelled && !r.IsExpelled)
-                    {
-                        return -1;
-                    }
+                    if (l.IsExpelled && !r.IsExpelled) { return -1; }
+                    if (!l.IsExpelled && r.IsExpelled) { return 1; }
 
-                    if (!l.IsExpelled && r.IsExpelled)
-                    {
-                        return 1;
-                    }
-
-                    // В остальных случаях сохраняем порядок
-                    return 0;
+                    return 0; // В остальных случаях сохраняем порядок
                 });
             }
 
-            public readonly void Print() =>
-                Console.WriteLine($"Participant{{name: \"{name}\", surname: \"{surname}\", totalTime: {TotalTime}, isExpelled: {IsExpelled}}}");
+            public readonly void Print() => Console.WriteLine(ToString());
+
+            override public readonly string ToString() =>
+                $"Participant{{name: \"{name}\", surname: \"{surname}\", totalTime: {TotalTime}, isExpelled: {IsExpelled}}}";
         }
     }
 }
