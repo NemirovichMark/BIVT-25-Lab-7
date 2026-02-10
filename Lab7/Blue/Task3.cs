@@ -58,15 +58,15 @@
                 if (array == null) { return; }
                 Array.Sort(array, (l, r) =>
                 {
-                    // Сначала по возрастанию
+                    // по возрастанию
                     var c = l.TotalTime.CompareTo(r.TotalTime);
                     if (c != 0) { return c; }
 
-                    // При равных исключенные идут перед неисключенными
+                    // при равных исключенные идут перед неисключенными
                     if (l.IsExpelled && !r.IsExpelled) { return -1; }
                     if (!l.IsExpelled && r.IsExpelled) { return 1; }
 
-                    return 0; // В остальных случаях сохраняем порядок
+                    return 0; // сохраняем порядок
                 });
             }
 
