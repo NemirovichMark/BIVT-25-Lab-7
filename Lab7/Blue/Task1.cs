@@ -2,20 +2,14 @@
 {
     public class Task1
     {
-        public struct Response
+        public struct Response(string name, string surname)
         {
-            string name, surname; // Война и мир в 7 словах: Зачем писать private, если он по умолчанию?
+            readonly string name = name, surname = surname;
             int votes = 0; // Имеют ли смысл отрицательные голоса?
 
             public readonly string Name => name;
             public readonly string Surname => surname;
-            public readonly int Votes => votes; // readonly защищает от взятия ссылки?
-
-            public Response(string name, string surname)
-            {
-                this.name = name;
-                this.surname = surname;
-            }
+            public readonly int Votes => votes;
 
             public int CountVotes(Response[] responses)
             {
@@ -30,9 +24,12 @@
                 return this.votes;
             }
 
-            public void Print() => Console.WriteLine($"Response{{name: \"{name}\", surname: \"{surname}\", votes: {votes}}}"); // 0 refs -- Я никому не Ужин
+            public readonly void Print() => Console.WriteLine(this.ToString()); // 0 refs -- метод такой типа: "Я никому не ужин"
 
-            bool Same(Response other) => this.name == other.name && this.surname == other.surname;
+            readonly bool Same(Response other) => this.name == other.name && this.surname == other.surname;
+
+            override public readonly string ToString() => 
+                $"Response{{name: \"{name}\", surname: \"{surname}\", votes: {votes}}}";
         }
     }
 }

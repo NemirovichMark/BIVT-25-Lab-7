@@ -79,7 +79,7 @@
                 });
             }
 
-            public readonly void Print() => Console.WriteLine(this.ToString());
+            public readonly void Print() => Console.WriteLine(this.ToString()); // 0 refs -- метод такой типа: "Я никому не ужин"
 
             override public readonly string ToString() =>
                 $"Participant{{name: \"{this.name}\", surname: \"{this.surname}\", totalTime: {this.TotalTime}, isExpelled: {this.IsExpelled}}}";

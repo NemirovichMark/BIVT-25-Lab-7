@@ -56,7 +56,7 @@
                 if (array != null) { Array.Sort(array, (l, r) => r.TotalScore.CompareTo(l.TotalScore)); }
             }
 
-            public readonly void Print() => Console.WriteLine(this.ToString());
+            public readonly void Print() => Console.WriteLine(this.ToString()); // 0 refs -- метод такой типа: "Я никому не ужин"
 
             readonly bool IsResultDestinationValid(int[] result) => result != null && result.Length == this.marks.JudmentsCount;
 
