@@ -4,5 +4,6 @@
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp"
     },
-    "omnisharp.enableEditorConfigSupport": true
+    "omnisharp.enableEditorConfigSupport": true,
+    "makefile.configureOnOpen": false
 }
