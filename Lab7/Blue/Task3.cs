@@ -5,45 +5,25 @@
         struct LiterallyAlmostNotAnUnefficientDynamicArrayListAndSomeThing()
         {
             int[] buffer = [];
-            int len = 0, sum;
-            bool sum_calculated = false;
+            int? sum = null;
 
-            public int Sum
-            {
-                get
-                {
-                    if (sum_calculated) { return this.sum; }
-                    this.sum_calculated = true;
-                    return this.sum = this.buffer.Sum();
-                }
-            }
-
-            public readonly bool Has(int target) => this.buffer.Any((item) => item == target);
-
+            public int Sum => (int)(null != this.sum ? this.sum : (this.sum = this.buffer.Cast<int>().Sum()));
+            public readonly bool Has(int target) => this.buffer.Contains(target);
             public readonly int[] View => (int[])this.buffer.Clone();
 
             public void Add(int value)
             {
-                this.Realloc(extra_values: 1);
+                this.Realloc(extra_len: 1);
                 this.Set(value, ^1);
             }
 
             void Set(int value, Index i) // класс Index не указан в разрешенных, но тут же можно? :)
             {
                 this.buffer[i] = value;
-                this.sum_calculated = false;
+                this.sum = null;
             }
 
-            void Realloc(uint extra_values)
-            {
-                var new_buffer = new int[this.len + extra_values];
-                if (this.len > 0)
-                {
-                    Array.Copy(this.buffer, new_buffer, this.len);
-                }
-                this.buffer = new_buffer;
-                this.len = new_buffer.Length;
-            }
+            void Realloc(uint extra_len) => Array.Resize(ref this.buffer, (int)(this.buffer.Length + extra_len));
         }
 
         public struct Participant(string name, string surname)

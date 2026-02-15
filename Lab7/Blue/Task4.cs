@@ -5,45 +5,21 @@
         struct AlmostListOfInts
         {
             int[] buffer = [];
-            int len = 0, sum;
-            bool sum_calculated = false;
+            int? sum = null;
 
             public AlmostListOfInts() { }
-
-            public int Sum
-            {
-                get
-                {
-                    if (sum_calculated) { return sum; }
-                    sum_calculated = true;
-                    return sum = buffer.Sum();
-                }
-            }
+            public int Sum => (int)(null != this.sum ? this.sum : (this.sum = this.buffer.Cast<int>().Sum()));
 
             public readonly bool Has(int target) => buffer.Contains(target);
-            public readonly int[] View
-            {
-                get
-                {
-                    var copy = new int[len];
-                    Array.Copy(buffer, copy, len);
-                    return copy;
-                }
-            }
+            public readonly int[] View => (int[])this.buffer.Clone();
             public void Add(int value)
             {
-                Realloc(1);
-                buffer[len - 1] = value;
-                sum_calculated = false;
+                Realloc(extra_len: 1);
+                buffer[^1] = value;
+                sum = null;
             }
 
-            void Realloc(uint extra)
-            {
-                var new_buffer = new int[len + extra];
-                if (len > 0) { Array.Copy(buffer, new_buffer, len); }
-                buffer = new_buffer;
-                len = buffer.Length;
-            }
+            void Realloc(int extra_len) => Array.Resize(ref this.buffer, this.buffer.Length + extra_len);
         }
 
         public struct Team(string name)
@@ -77,13 +53,11 @@
                 count += 1;
             }
 
-            public void Add(Team[]? ts)
+            public void Add(Team[]? t)
             {
-                if (ts == null) { return; }
-
-                for (int i = 0; i < ts.Length && count < 12; i += 1)
+                for (var i = 0; t != null && i < t.Length && count < 12; i += 1)
                 {
-                    teams[count] = ts[i];
+                    teams[count] = t[i];
                     count += 1;
                 }
             }
@@ -98,14 +72,14 @@
             public static Group Merge(Group a, Group b, int size)
             {
                 var combined = new Team[12];
-                int idx = 0;
-                for (int i = 0; i < 6; i++) { combined[idx++] = a.teams[i]; }
-                for (int i = 0; i < 6; i++) { combined[idx++] = b.teams[i]; }
+                var idx = 0;
+                for (var i = 0; i < 6; i++) { combined[idx++] = a.teams[i]; }
+                for (var i = 0; i < 6; i++) { combined[idx++] = b.teams[i]; }
 
                 Array.Sort(combined, (l, r) => r.TotalScore.CompareTo(l.TotalScore));
 
                 var ret = new Group("Финалисты");
-                for (int i = 0; i < idx && ret.count < size; i++) { ret.Add(combined[i]); }
+                for (var i = 0; i < idx && ret.count < size; i++) { ret.Add(combined[i]); }
                 return ret;
             }
         }
