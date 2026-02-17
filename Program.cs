@@ -48,7 +48,7 @@ namespace ConsoleApp2
 
         public Person[] Persons => _persons.ToArray();
 
-        public Village(string name) {
+        public Village(string n) {
 
             _persons = new Person[8]
             {
@@ -64,5 +64,6 @@ namespace ConsoleApp2
         }
     }
 }
+
 
 
