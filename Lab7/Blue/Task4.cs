@@ -39,12 +39,12 @@
                     if (_scores == null)
                         return 0;
 
-                    int total = 0;
+                    int vsego = 0;
                     for (int i = 0; i < _scores.Length; i++)
                     {
-                        total += _scores[i];
+                        vsego += _scores[i];
                     }
-                    return total;
+                    return vsego;
                 }
             }
 
@@ -155,7 +155,7 @@
                 // + команды по одной, пока есть куда пихать
                 for (int i = 0; i < teams.Length && availableSlots > 0; i++)
                 {
-                    // нарушение авторских прав?
+                    // нарушение авторских прав? бан
                     bool isDuplicate = false;
                     for (int j = 0; j < _count; j++)
                     {
@@ -207,74 +207,21 @@
 
             public static Group Merge(Group group1, Group group2, int size)
             {
-                //+ финалисты
                 Group result = new Group("Финалисты");
 
-                // команды 1
-                Team[] teams1 = new Team[group1._count];
-                for (int i = 0; i < group1._count; i++)
-                    teams1[i] = group1._teams[i];
+                int countTeam = size / 2; // надо 6 из 12
+                group1.Sort();
+                group2.Sort();
 
-                // команды 2
-                Team[] teams2 = new Team[group2._count];
-                for (int i = 0; i < group2._count; i++)
-                    teams2[i] = group2._teams[i];
-
-                for (int i = 0; i < teams1.Length - 1; i++)
+                for (int i = 0; i < countTeam; i++)
                 {
-                    for (int j = 0; j < teams1.Length - 1 - i; j++)
-                    {
-                        if (teams1[j].TotalScore < teams1[j + 1].TotalScore)
-                        {
-                            (teams1[j], teams1[j + 1]) = (teams1[j], teams1[j + 1]);
-                        }
-                    }
+                    result.Add(group1._teams[i]);
+                    result.Add(group2._teams[i]);
                 }
-
-                for (int i = 0; i < teams2.Length - 1; i++)
-                {
-                    for (int j = 0; j < teams2.Length - 1 - i; j++)
-                    {
-                        if (teams2[j].TotalScore < teams2[j + 1].TotalScore)
-                        {
-                            (teams2[j], teams2[j + 1]) = (teams2[j + 1], teams2[j]);
-                        }
-                    }
-                }
-
-                // Берем по 6 лучших из каждой группы 
-                int takeFromGroup1 = Math.Min(6, teams1.Length);
-                int takeFromGroup2 = Math.Min(6, teams2.Length);
-
-                // Создаем массив для финалистов
-                Team[] finalists = new Team[takeFromGroup1 + takeFromGroup2];
-                int finalistIndex = 0;
-
-                // Добавляем лучшие команды
-                for (int i = 0; i < takeFromGroup1; i++)
-                    finalists[finalistIndex++] = teams1[i];
-                for (int i = 0; i < takeFromGroup2; i++)
-                    finalists[finalistIndex++] = teams2[i];
-
-                // Сортируем всех
-                for (int i = 0; i < finalistIndex - 1; i++)
-                {
-                    for (int j = 0; j < finalistIndex - 1 - i; j++)
-                    {
-                        if (finalists[j].TotalScore < finalists[j + 1].TotalScore)
-                        {
-                            (finalists[j], finalists[j + 1]) = (finalists[j+1], finalists[j]);
-                        }
-                    }
-                }
-
-                // Берем только нужное кол-во финалистов
-                int teamsToTake = Math.Min(size, finalistIndex);
-                for (int i = 0; i < teamsToTake; i++)
-                    result.Add(finalists[i]);
-
+                result.Sort();
                 return result;
             }
+            
 
             public void Print()
             {

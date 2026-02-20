@@ -42,7 +42,7 @@ namespace Lab7.Blue
            
             public void Print()
             {
-                Console.WriteLine($"{Name} {Surname} {Place}");
+                return;
             }
         }
 
@@ -90,7 +90,7 @@ namespace Lab7.Blue
                     int total = 0;
                     for (int i = 0; i < _sportsmen.Length; i++)
                     {
-                        int place = _sportsmen[i].Place;
+                        int place = _sportsmen[i].Place; //берем i-ного оттуда плейс
                         if (place == 1)
                             total += 5;
                         else if (place == 2)
@@ -101,7 +101,7 @@ namespace Lab7.Blue
                             total += 2;
                         else if (place == 5)
                             total += 1;
-                        // остальные места = 0 баллов
+                        // остальные места = 0 баллов, что уе в начале написнао
                     }
                     return total;
                 }
@@ -114,7 +114,7 @@ namespace Lab7.Blue
                     if (_sportsmen == null || _sportsmen.Length == 0)
                         return 0;
 
-                    int topPlace = 1000;
+                    int topPlace = 19; //ну типо меньшее место круче так что да а всего 18
                     for (int i = 0; i < _sportsmen.Length; i++)
                     {
                         int place = _sportsmen[i].Place;
@@ -150,8 +150,7 @@ namespace Lab7.Blue
             {
                 if (sportsmen == null)
                     return;
-                int availableSlots = MAX_SPORTSMEN - _sportsmen.Length; // Сколько свободных мест осталось
-                int sportsmenToAdd = Math.Min(availableSlots, sportsmen.Length); // Сколько спортсменов можем добавить
+                int sportsmenToAdd = MAX_SPORTSMEN - _sportsmen.Length; // Сколько свободных мест 
 
                 if (sportsmenToAdd <= 0)
                     return;
@@ -202,20 +201,9 @@ namespace Lab7.Blue
                 }
             }
 
-            // Метод - вывести информацию о команде
             public void Print()
             {
-                Console.WriteLine($"Команда: {Name}");
-                Console.WriteLine($"Общий счет: {TotalScore}, Лучшее место: {TopPlace}");
-                Console.WriteLine($"Спортсмены ({_sportsmen.Length} из {MAX_SPORTSMEN}):");
-                if (_sportsmen != null)
-                {
-                    for (int i = 0; i < _sportsmen.Length; i++)
-                    {
-                        Console.Write(i + 1);
-                        _sportsmen[i].Print();
-                    }
-                }
+                return;
             }
         }
     }

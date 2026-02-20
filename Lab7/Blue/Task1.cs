@@ -91,8 +91,7 @@
             /// Метод для вывода информации
             public void Print()
             {
-                // Вывод в формате: Имя Фамилия КоличествоГолосов
-                Console.WriteLine($"{Name} {Surname} {Votes}");
+                return;
             }
         }
     }

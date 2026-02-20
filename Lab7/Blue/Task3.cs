@@ -14,12 +14,8 @@
                 // Проверяем имя на null, если не null - сохраняем, если null - пустая строка
                 if (name != null)
                     _name = name;
-                else
-                    _name = "";
                 if (surname != null)
                     _surname = surname;
-                else
-                    _surname = "";
                 _penaltyTimes = new int[0];
             }
 
@@ -104,14 +100,7 @@
             }
             public void Print()
             {
-                Console.Write($"{Name} {Surname} ");
-
-                if (_penaltyTimes != null)
-                {
-                    for (int i = 0; i < _penaltyTimes.Length; i++)
-                        Console.Write(_penaltyTimes[i] + " ");
-                }
-                Console.WriteLine($"{TotalTime} {IsExpelled}");
+                return;
             }
         }
     }

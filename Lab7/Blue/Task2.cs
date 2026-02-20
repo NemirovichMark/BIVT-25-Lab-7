@@ -13,8 +13,14 @@
             /// пчелёнок с баллами
             public Participant(string name, string surname)
             {
-                _name = name ?? string.Empty;
-                _surname = surname ?? string.Empty;
+                if (name != null)
+                {
+                    _name = name;
+                }
+                if (surname != null)
+                {
+                    _surname = surname;
+                }
                 // бим бэм матрица с нуликами
                 _balls = new int[2, 5];
             }
@@ -89,7 +95,7 @@
                     }
                 }
 
-                if (jumpNumber != -1)
+                if (jumpNumber > -1)
                 {
                     for (int j = 0; j < 5; j++)
                     {
@@ -122,19 +128,7 @@
             /// Метод для вывода информации об участнике
             public void Print()
             {
-                Console.Write($"{Name} {Surname} ");
-
-                for (int j = 0; j < 5; j++)
-                {
-                    Console.Write($"{_balls[0, j]} ");
-                }
-
-                for (int j = 0; j < 5; j++)
-                {
-                    Console.Write($"{_balls[1, j]} ");
-                }
-
-                Console.WriteLine(TotalScore);
+                return;
             }
         }
     }
