@@ -225,16 +225,9 @@
 
             public void Print()
             {
-                Console.WriteLine($"Группа: {Name} (команд: {_count} из {MAX_TEAMS})");
-                if (_count > 0)
-                {
-                    for (int i = 0; i < _count; i++)
-                    {
-                        Console.Write(i + 1);
-                        _teams[i].Print();
-                    }
-                }
+                return;
             }
         }
     }
+
 }
