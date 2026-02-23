@@ -1,0 +1,159 @@
+using System;
+
+namespace VillageTask
+{
+    public class Program
+    {
+        public struct Person
+        {
+            private string _name;
+            private string _hairColor;
+            private string _hairStyle;
+            private string _clothingColor;
+            private string _clothingType;
+            private string _headwear;
+            private string _accessories;
+            private bool Sex; // 1 - male, 0 - female;
+
+            public Person(string name, string hairColor, string hairStyle, string clothingColor,
+                          string clothingType, string headwear, string accessories, bool sex)
+            {
+                _name = name;
+                _hairColor = hairColor;
+                _hairStyle = hairStyle;
+                _clothingColor = clothingColor;
+                _clothingType = clothingType;
+                _headwear = headwear;
+                _accessories = accessories;
+                Sex = sex;
+            }
+
+            public void Print()
+            {
+                Console.WriteLine($"{_name}: волосы {_hairColor} {_hairStyle}, одежда {_clothingColor} {_clothingType}, {_headwear}, {_accessories}");
+            }
+        }
+
+        public struct Village
+        {
+            private Person[] _residents = new Person[8];
+            public Village(Person[] residents)
+            {
+                _residents = residents;
+            }
+
+            public void AddPerson(Person person)
+            {
+                var newResidents = new Person[_residents.Length + 1];
+                _residents.CopyTo(newResidents, 0);
+                newResidents[newResidents.Length - 1] = person;
+                _residents = newResidents;
+            }
+
+            public void PrintAllResidents()
+            {
+                Console.WriteLine("Жители деревни:");
+                foreach (var person in _residents)
+                {
+                    person.Print();
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            Person[] residents = new Person[]
+            {
+                //Мужчина с бородой и копьем
+                new Person(
+                    "Борис",
+                    "тёмные",
+                    "длинные с бородой",
+                    "синяя",
+                    "туника",
+                    "синяя шапка",
+                    "копьё",
+                    true),
+
+                // Мужчина в светлой шапке
+                new Person(
+                    "Степан",
+                    "серые",
+                    "короткие",
+                    "светлая",
+                    "рубаха и жилет",
+                    "светлая шапка",
+                    "поясная сумка",
+                    true),
+
+                // Рыжеволосая девушка
+                new Person(
+                    "Анна",
+                    "рыжие",
+                    "длинные",
+                    "зелёная",
+                    "платье",
+                    "без головного убора",
+                    "походная сумка",
+                    false),
+
+                // Девушка в тёмной шляпе
+                new Person(
+                    "Мария",
+                    "тёмные",
+                    "короткие",
+                    "коричневая",
+                    "платье",
+                    "чёрная шляпа",
+                    "без аксессуаров",
+                    false),
+
+                // Пожилой мужчина с ведром
+                new Person(
+                    "Егор",
+                    "седые",
+                    "длинные с бородой",
+                    "синяя",
+                    "рубаха-платье",
+                    "синяя шапка",
+                    "ведро",
+                    true),
+
+                // Молодой парень в синем
+                new Person(
+                    "Илья",
+                    "тёмные",
+                    "средние",
+                    "синяя",
+                    "туника",
+                    "синяя шапка",
+                    "без аксессуаров",
+                    true),
+
+                // Парень с зелёными волосами и ножом
+                new Person(
+                    "Тимофей",
+                    "коричневые",
+                    "кудрявые",
+                    "зелёная",
+                    "рубаха",
+                    "зелёный шляпа",
+                    "нож",
+                    true),
+
+                // Девушка с голубыми волосами
+                new Person(
+                    "Ольга",
+                    "серые",
+                    "длинные",
+                    "голубая",
+                    "платье",
+                    "голубой платок",
+                    "без аксессуаров",
+                    false)
+            };
+
+            Village village = new Village(residents);
+            village.PrintAllResidents();
+        }
+    }
+}
