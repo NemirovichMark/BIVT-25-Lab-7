@@ -63,9 +63,9 @@ namespace ClassWork
             {
                 _name = name;
                 _villagers = new Villager[0];
-                var villagers = new Villager[1]
+                var villagers = new Villager[]
                 {
-                    new Villager("Georgy", "Male", 54, true, "Long hair with beard", (Villager.Color)1, "Bag", "Browm boots", "Blue mantia"),
+                    new Villager("Georgy", "Male", 54, true, "Long hair with beard", Villager.Color.DarkGray, "Bag", "Brown boots", "Blue mantia"),
                     // new Villager(default(Villager)),
                     // new Villager(default(Villager)),
                     // new Villager(default(Villager)),
@@ -80,6 +80,7 @@ namespace ClassWork
 
             public void AddVillager(Villager villager)
             {
+                if (villager == null) return;
                 Array.Resize(ref _villagers, _villagers.Length+1);
                 _villagers[^1] = villager;
             }
