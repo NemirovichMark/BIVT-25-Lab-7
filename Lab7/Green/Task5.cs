@@ -72,9 +72,13 @@ namespace Lab7.Green
                 _students=new Student[5];
                 _count = 0;
             }
+            public void Add(Student student)
+            {
+                if (_count < _students.Length) { _students[_count++] = student; }
+            }
             public void Add(Student[] students)
             {
-                foreach (var student in students) { Add(students); }
+                foreach (var student in students) { Add(student); }
             }
             public static void SortByAverageMark(Group[] array)
             {
