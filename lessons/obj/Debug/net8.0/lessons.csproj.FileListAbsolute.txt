@@ -1,0 +1,14 @@
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\bin\Debug\net8.0\lessons.exe
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\bin\Debug\net8.0\lessons.deps.json
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\bin\Debug\net8.0\lessons.runtimeconfig.json
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\bin\Debug\net8.0\lessons.dll
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\bin\Debug\net8.0\lessons.pdb
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.AssemblyInfoInputs.cache
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.AssemblyInfo.cs
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.csproj.CoreCompileInputs.cache
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.dll
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\refint\lessons.dll
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.pdb
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\lessons.genruntimeconfig.cache
+C:\Users\retin\OneDrive\Рабочий стол\Progects\Activity\lessons\obj\Debug\net8.0\ref\lessons.dll

@@ -1,0 +1,27 @@
+2026-02-23T09:14:18.9997424+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-02-23T09:14:19.0330220+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-02-23T09:14:19.0365890+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-02-23T09:14:19.0366040+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 09:14:18.951
+2026-02-23T09:14:19.0404914+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 21240
+2026-02-23T09:14:19.0406680+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.21
+2026-02-23T09:14:19.0406813+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.21\System.Private.CoreLib.dll
+2026-02-23T09:14:19.0407095+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-02-23T09:14:19.0407141+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-23T09:14:19.0412754+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 55049'
+2026-02-23T09:14:19.0437853+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-02-23T09:14:19.1173763+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-02-23T09:14:19.1467104+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-02-23T09:14:19.4522942+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-02-23T09:14:19.4698463+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings datacollectors are not supported by Microsoft.Testing.Platform and will be ignored
+2026-02-23T09:14:19.5180235+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-02-23T09:14:19.5289106+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-02-23T09:14:19.6037722+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 4 tests from source C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-23T09:14:19.6685581+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-23T09:14:19.6804547+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-02-23T09:14:19.6966592+00:00 mstest-trace INFORMATION Executing test Test_02_Count_Half
+2026-02-23T09:14:19.7810250+00:00 mstest-trace INFORMATION Executed test Test_02_Count_Half
+2026-02-23T09:14:19.7851595+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task1.Test_02_Count_Half failed. ErrorMessage:Assert.AreEqual failed. Expected:<1>. Actual:<0>. Количество голосов для Татьяна Степанова не совпадает, ErrorStackTrace:   at Lab7Test.Blue.Task1.Test_02_Count_Half() in C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\Blue\Task1.cs:line 94
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-02-23T09:14:19.7932479+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\retin\OneDrive\Рабочий стол\Progects\labs\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
