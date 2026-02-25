@@ -77,7 +77,7 @@ namespace Lab7.Green
                     for (int i = 1; i < array.Length; i++)
                     {
                         int j = i;
-                        while (array[i].AverageMark > array[i - 1].AverageMark && i > 0)
+                        while (i > 0 && array[i].AverageMark > array[i - 1].AverageMark)
                         {
                             (array[i], array[i - 1]) = (array[i - 1], array[i]);
                             i--;
