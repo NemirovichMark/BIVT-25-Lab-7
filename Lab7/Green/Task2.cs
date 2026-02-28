@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 
 namespace Lab7.Green
 {
     public class Task2
     {
-                public struct Student
+        public struct Student
         {
             private string _name;
             private string _surname;
@@ -100,7 +100,4 @@ namespace Lab7.Green
             }
         }
     }
-}
-    }
-
 }
