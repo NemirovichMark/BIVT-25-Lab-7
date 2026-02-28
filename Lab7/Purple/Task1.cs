@@ -16,11 +16,21 @@
             public double[] Coefs => _coefs.ToArray();
             public int[,] Marks => (int[,])_marks.Clone();
 
-            public double[,] TotalScore
+            public double TotalScore
             {
                 get
                 {
-                    return null;
+                    int[] temp = new int[7];
+                    double score = 0;
+                    for (int y = 0; y < _marks.GetLength(0); y++)
+                    {
+                        for (int x = 0; x < _marks.GetLength(1); x++)
+                        {
+                            temp[x] = _marks[y, x];
+                        }
+                        score += (temp.Sum() - temp.Max() - temp.Min()) * _coefs[y];
+                    }
+                    return score;
                 }
             }
 
@@ -31,25 +41,64 @@
                 _surname = Surname;
                 _coefs = [2.5, 2.5, 2.5, 2.5];
                 _marks = new int[4, 7];
-                _currentJump = 0;
+                for (int y = 0; y < _marks.GetLength(0); y++)
+                    for (int x = 0; x < _marks.GetLength(1); x++)
+                        _marks[y, x] = 0;
             }
             public void SetCriterias(double[] coefs)
             {
                 bool isA = true;
-                //if (coefs.Length == 4)
-                //    for (int x = 0; x < _coefs.Length; x++)
-                //        if (coefs[x] < 2.5) 
+                if (coefs.Length == 4)
+                {
+                    for (int x = 0; x < _coefs.Length; x++)
+                    {
+                        if (coefs[x] < 2.5 || coefs[x] > 3.5)
+                        {
+                            isA = false;
+                            break;
+                        }
+                    }
+                    if (isA)
+                    {
+                        for (int x = 0; x < _coefs.Length; x++)
+                            _coefs[x] = coefs[x];
+                    }
+                }
             }
             public void Jump(int[] marks)
             {
                 bool isA = true;
                 if (marks.Length == 7 && _currentJump < 4)
+                {
                     for (int x = 0; x < _marks.GetLength(1); x++)
-                        if (marks[x] < 0 || marks[x] > 6) isA = false;
+                        if (marks[x] < 0 || marks[x] > 6)
+                        {
+                            isA = false;
+                            break;
+                        }
+                }
                 if (isA)
+                {
                     for (int x = 0; x < _marks.GetLength(1); x++)
                         _marks[_currentJump, x] = marks[x];
-                _currentJump++;
+                    _currentJump++;
+                }
+            }
+            public static void Sort(Participant[] array)
+            {
+                Participant temp;
+                for(int i = 0; i < array.Length; i++)
+                {
+                    for(int j = 0; j < array.Length - i - 1; j++)
+                    {
+                        if (array[j + 1].TotalScore > array[j].TotalScore)
+                        {
+                            temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
             }
             public void Print()
             {
@@ -59,20 +108,17 @@
                 Console.WriteLine("Оценки Судей:");
                 PrintMatrix(_marks);
             }
-            public static void Sort(Participant[] array)
+        }
+        
+        private static void PrintMatrix(int[,] matrix)
+        {
+            for (int y = 0; y < matrix.GetLength(0); y++)
             {
-
-            }
-            private void PrintMatrix(int[,] matrix)
-            {
-                for (int y = 0; y < matrix.GetLength(0); y++)
+                for (int x = 0; x < matrix.GetLength(1); x++)
                 {
-                    for (int x = 0; x < matrix.GetLength(1); x++)
-                    {
-                        Console.Write($"{matrix[y, x]} ");
-                    }
-                    Console.WriteLine();
+                    Console.Write($"{matrix[y, x]} ");
                 }
+                Console.WriteLine();
             }
         }
     }
