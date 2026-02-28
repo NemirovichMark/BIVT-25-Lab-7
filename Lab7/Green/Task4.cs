@@ -1,8 +1,8 @@
-﻿namespace Lab7.Green
+namespace Lab7.Green
 {
     public class Task4
     {
-                public struct Participant
+        public struct Participant
         {
             private string _name;
             private string _surname;
@@ -74,6 +74,3 @@
     }
 }
     
-    }
-
-}
