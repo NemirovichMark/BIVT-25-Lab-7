@@ -66,8 +66,22 @@ namespace Lab7.Green
             }
             public void Print()
             {
-                return;
+                Console.WriteLine($"Фамилия: {_surname}");
+                Console.WriteLine($"Группа: {_group}");
+                Console.WriteLine($"Тренер: {_trainer}");
+
+                if (_result == 0)
+                {
+                    Console.WriteLine("Результат: еще не заполнен");
+                }
+                else
+                {
+                    Console.WriteLine($"Результат: {_result} сек");
+                    Console.WriteLine($"Норматив: {(_result <= _standard ? "ВЫПОЛНЕН" : "НЕ ВЫПОЛНЕН")}");
+                }
+                Console.WriteLine();
             }
         }
+        
     }
 }
