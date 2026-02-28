@@ -68,9 +68,13 @@ namespace Lab7.Green
             }
             public void Print()
             {
-                return;
+                Console.WriteLine("Участник: " + _name + " " + _surname);
+                Console.WriteLine("Прыжки: " + _jumps[0] + " " + _jumps[1] + " " + _jumps[2]);
+                Console.WriteLine("Лучший прыжок: " + BestJump);
+                Console.WriteLine();
             }
         }
     }
 }
     
+
