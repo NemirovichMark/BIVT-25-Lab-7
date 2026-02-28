@@ -1,0 +1,15 @@
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\bin\Debug\net8.0\Lab7.exe
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\bin\Debug\net8.0\Lab7.deps.json
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\bin\Debug\net8.0\Lab7.runtimeconfig.json
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\bin\Debug\net8.0\Lab7.dll
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\bin\Debug\net8.0\Lab7.pdb
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.GeneratedMSBuildEditorConfig.editorconfig
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.AssemblyInfoInputs.cache
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.AssemblyInfo.cs
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.csproj.CoreCompileInputs.cache
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.sourcelink.json
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.dll
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\refint\Lab7.dll
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.pdb
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\Lab7.genruntimeconfig.cache
+C:\misisvscs\BIVT-25-Lab-7-Afanasev\Lab7\obj\Debug\net8.0\ref\Lab7.dll
