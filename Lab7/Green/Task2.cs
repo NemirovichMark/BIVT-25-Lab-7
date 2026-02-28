@@ -96,8 +96,22 @@ namespace Lab7.Green
             }
             public void Print()
             {
-                return;
+                Console.WriteLine($"Студент: {_name} {_surname}");
+                Console.Write("Оценки: ");
+                
+                for (int i = 0; i < _marks.Length; i++)
+                {
+                    if (_marks[i] == 0)
+                        Console.Write("_ "); // не сданный экзамен
+                    else
+                        Console.Write($"{_marks[i]} ");
+                }
+                
+                Console.WriteLine($"\nСредний балл: {AverageMark:F2}");
+                Console.WriteLine($"Отличник: {(IsExcellent ? "Да" : "Нет")}");
+                Console.WriteLine();
             }
         }
     }
 }
+
