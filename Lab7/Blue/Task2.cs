@@ -37,7 +37,7 @@
                     {
                         for (int j = 0; j < _marks.GetLength(1); j++)
                         {
-                            sum +=  _marks[i, j];
+                            sum += _marks[i, j];
                         }
                     }
 
