@@ -41,12 +41,25 @@ namespace Lab7.Green
             }
             public static void Sort(Participant[] array)
             {
-                if (array == null) return;
                 
-                Array.Sort(array, (a, b) => b.BestJump.CompareTo(a.BestJump));
+                if (array == null) return;
+
+                int n = array.Length;
+                for (int i = 0; i < n - 1; i++)
+                {
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        if (array[j].BestJump < array[j + 1].BestJump)
+                        {
+                            Participant temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
             }
 
-            
+
             public void Print()
             {
                 Console.WriteLine($"Имя: {_name}, Фамилия: {_surname}, Лучший прыжок: {BestJump}");
