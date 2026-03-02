@@ -9,104 +9,55 @@ namespace Lab7.Green
             private string _name;
             private string _surname;
             private int[] _marks;
-            private int _examCount;
+
+            public string Name => _name;
+            public string Surname => _surname;
+            public int[] Marks => _marks.ToArray();
+            public double AverageMark  => _marks.Average();
+            public bool IsExcellent
+            {
+                get
+                {
+                    foreach (int mark in _marks)
+                    {
+                        if (mark < 4)
+                            return false;
+                    }
+                    return true;
+                }
+            }
 
             public Student(string name, string surname)
             {
                 _name = name;
                 _surname = surname;
                 _marks = new int[4];
-                _examCount = 0;
-            }
-
-            public string Name
-            {
-                get
-                {
-                    if (_name == null) return "";
-                    return _name;
-                }
-            }
-            public string Surname
-            {
-                get
-                {
-                    if (_surname == null) return "";
-                    return _surname;
-                }
-            }
-            public int[] Marks
-            {
-                get
-                {
-                    if (_marks == null)
-                        return new int[0];
-
-                    int[] copy = new int[_marks.Length];
-                    for (int i = 0; i < _marks.Length; i++)
-                        copy[i] = _marks[i];
-                    return copy;
-                }
-            }
-
-            public double AverageMark
-            {
-                get
-                {
-                    if (_marks == null) return 0;
-
-                    double sum = 0;
-                    for (int i = 0; i < _marks.Length; i++)
-                    {
-                        sum += _marks[i];
-                    }
-                    return sum / 4;
-                }
-            }
-
-            public bool IsExcellent
-            {
-                get
-                {
-                    if (_marks == null) return false;
-
-                    for (int i = 0; i < _marks.Length; i++)
-                    {
-                        int mark = _marks[i];
-                        if (mark < 4 || mark > 5) { return false; }
-
-                    }
-                    return true;
-                }
             }
 
             public void Exam(int mark)
             {
-                if (_examCount >= 4) { return; }
-                if (_marks == null)
-                    _marks = new int[4];
-                _marks[_examCount] = mark;
-                _examCount++;
+                for (int i = 0; i < _marks.Length; i++)
+                {   
+                    if(_marks[i] == 0)
+                    {
+                        _marks[i] = mark;
+                        break;
+                    };
+                }
             }
-
+            
             public static void SortByAverageMark(Student[] array)
             {
-                for (int i = 0; i < array.Length - 1; i++)
-                {
-                    for (int j = 0; j < array.Length - 1 - i; j++)
-                    {
-                        if (array[j].AverageMark < array[j + 1].AverageMark)
-                        {
-                            (array[j], array[j + 1]) = (array[j + 1], array[j]);
-                        }
-                    }
-                }
+                Array.Sort(array, (a, b) => b.AverageMark.CompareTo(a.AverageMark));
             }
 
             public void Print()
             {
-                string marksStr = string.Join(", ", Marks);
-                Console.WriteLine($"Студент: {Name} {Surname}, оценки: {marksStr}, средний балл: {AverageMark:F2}, отличник: {IsExcellent}");
+                Console.WriteLine($"Name: {Name}");
+                Console.WriteLine($"Surname: {Surname}");
+                Console.WriteLine($"Marks: {Marks}");
+                Console.WriteLine($"Average mark: {AverageMark}");
+                Console.WriteLine($"Is excellent: {IsExcellent}");
             }
         }
     }
