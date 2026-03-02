@@ -86,7 +86,6 @@ namespace Lab7.Purple
 
             public Participant(string name, string surname)
             {
-                // Проинициализировать ВСЕ нестатические поля
                 _name = name;
                 _surname = surname;
                 _coefs = new double[4] { 2.5, 2.5, 2.5, 2.5 };

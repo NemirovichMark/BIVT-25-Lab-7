@@ -3,18 +3,7 @@
     public class Task3
 
     {
-        public class Program
-        {
-            static void Mains(string[] args)
-            {
-                Participant D = new Participant("ben", "loh");
-                Participant A = new Participant("вова", "ut");
-                Participant B = new Participant("rrr", "utr");
-                Participant C = new Participant("utyyf", "utr");
-                Participant[] participant = new Participant[] { A, B, C, D};
-                
-            }
-        }
+
         public struct Participant
         {
 

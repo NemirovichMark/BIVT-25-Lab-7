@@ -4,19 +4,7 @@ namespace Lab7.Purple
 {
     public class Task4
     {
-        public class Program
-        {
-            static void Main(string[] args)
-            {
-                Sportsman D = new Sportsman("ben", "loh");
-                Sportsman A = new Sportsman("вова", "ut");
-                A.Print();
-                A.Run(1.576);
-                A.Print();
-                
 
-            }
-        }
         public struct Sportsman
         {
             private string _name;
