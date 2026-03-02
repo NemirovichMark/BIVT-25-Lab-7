@@ -1,0 +1,94 @@
+using Microsoft.SqlServer.Server;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class A
+    {
+        //поля
+        protected string _name;
+        protected int _age;
+        protected string _surname;
+
+        //свойства
+        public string Name => _name;
+        public int Age => _age;
+        public string Surname => _surname;
+
+        //конструктор
+        public A(string name,int age,string surname)
+        {
+            _name = name;
+            _age = age;
+            _surname = surname;
+        }
+        public virtual  void Method()
+        {
+            Console.WriteLine("Method in class A");
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Name: {_name}, Age:{_age}, Surname: {_surname} ");
+        }
+    }
+    public class B:A
+    {
+        private string _word;
+        private bool _isValid;
+
+        
+        public string Word => _word;
+        public B(string name, int age, string surname, string word) : base(name, age, surname) 
+        {
+            _word= word;
+            _isValid = true;
+        }
+        public B(string name, int age, string surname, string word, bool isValid) : this(name, age, surname, word)
+        {
+            _isValid = isValid;
+
+        }
+        public override void Method()
+        {
+            Console.WriteLine("Method in class B");
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Name: {_name}, Age:{_age}, Surname: {_surname} ,Word: {_word}");
+        }
+
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            A exampleA = new A("Example", 154, "Prem");
+
+            B exampleB = new B("NewExample", 0, "Street", "random",false);
+
+            //exampleA.Method();
+            //exampleB.Method();
+            exampleA.Print();
+            exampleB.Print();
+            A var1 = new A("A", 1,"S");
+            //B var2 = new B("A", 1,"S","rrrr");
+            A var3 = new B("hiddenB", 2, "s","a");
+            var3.Method();
+
+
+            
+
+
+
+
+        }
+    }
+}
