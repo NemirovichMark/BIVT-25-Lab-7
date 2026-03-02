@@ -27,7 +27,7 @@ namespace Lab7.Purple
             public int CountVotes(Response[] responses, int questionNumber)
             {
                 int count = 0;
-                string currentAnswer = null;
+                string currentAnswer = "";
 
                 if (questionNumber == 1)
                     currentAnswer = _animal;
@@ -113,3 +113,4 @@ namespace Lab7.Purple
         }
     }
 }
+
