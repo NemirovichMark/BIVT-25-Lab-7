@@ -61,7 +61,7 @@ namespace Lab7.Purple
                 _places = new int[7];
                 _marksCount = 0;
             }
-            public void Evalute(double result)
+            public void Evaluate(double result)
             {
                 if (_marksCount < 7)
                 {
@@ -124,4 +124,5 @@ namespace Lab7.Purple
             }
         }
     }
+
 }
