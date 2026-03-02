@@ -7,96 +7,53 @@ namespace Lab7.Green
             private string _name;
             private string _surname;
             private int[] _marks;
-            private int _examCount;
+
+            public string Name => _name;
+            public string Surname => _surname;
+            public int[] Marks => _marks.ToArray();
+            public double AverageMark => _marks.Average();
 
             public Student(string name, string surname)
             {
                 _name = name;
                 _surname = surname;
                 _marks = new int[5];
-                _examCount = 0;
-            }
-            public string Name => _name;
-            public string Surname => _surname;
-            public int[] Marks
-            {
-                get
-                {
-                    if (_marks == null) return new int[0];
-                    int[] copy = new int[_marks.Length];
-                    for (int i = 0; i < copy.Length; i++)
-                    {
-                        copy[i] = _marks[i];
-                    }
-                    return copy;
-                }
-            }
-
-            public double AverageMark
-            {
-                get
-                {
-                    if (_marks == null) return 0;
-                    double sum = 0;
-                    for (int i = 0; i < _marks.Length; i++)
-                    {
-                        sum += _marks[i];
-                    }
-                    return sum / 5;
-                }
             }
 
             public void Exam(int mark)
             {
-                if (_examCount >= 5) return;
-                if (_marks == null) _marks = new int[5];
-                _marks[_examCount] = mark;
-                _examCount++;
+                for (int i = 0; i < _marks.Length; i++)
+                {
+                    if (_marks[i] == 0)
+                    {
+                        _marks[i] = mark;
+                        break;
+                    }
+                }
             }
 
             public void Print()
             {
-                Console.WriteLine($"  Студент: {Name} {Surname}, оценки: {string.Join(", ", Marks)}, средний балл: {AverageMark:F2}");
+                Console.WriteLine($"Name: {Name}");
+                Console.WriteLine($"Surname: {Surname}");
+                Console.WriteLine($"Marks: {Marks}");
+                Console.WriteLine($"Average mark: {AverageMark}");
             }
         }
+
         public struct Group
         {
             private string _name;
             private Student[] _students;
 
+            public string Name => _name;
+            public Student[] Students => _students.ToArray();
+            public double AverageMark => _students.Average(x => x.AverageMark);
+
             public Group(string name)
             {
                 _name = name;
                 _students = new Student[0];
-            }
-
-            public string Name => _name;
-            public Student[] Students
-            {
-                get
-                {
-                    if (_students == null) return new Student[0];
-                    Student[] copy = new Student[_students.Length];
-                    for (int i = 0; i < _students.Length; i++)
-                    {
-                        copy[i] = _students[i];
-                    }
-                    return copy;
-                }
-            }
-
-            public double AverageMark
-            {
-                get
-                {
-                    if (_students == null || _students.Length == 0) return 0;
-                    double sum = 0;
-                    for (int i = 0; i < _students.Length; i++)
-                    {
-                        sum += _students[i].AverageMark;
-                    }
-                    return sum / _students.Length;
-                }
             }
 
             public void Add(Student student)
@@ -107,35 +64,21 @@ namespace Lab7.Green
 
             public void Add(Student[] students)
             {
-                foreach (Student s in students)
-                {
-                    Add(s);
-                }
+                int old = _students.Length;
+                Array.Resize(ref _students, old + students.Length);
+                
+                for (int i = 0; i < students.Length; i++)
+                    _students[old + i] = students[i];
             }
-
             public static void SortByAverageMark(Group[] array)
             {
-                for (int i = 0; i < array.Length; i++)
-                {
-                    for (int j = 0; j < array.Length - i - 1; j++)
-                    {
-                        if (array[j].AverageMark < array[j + 1].AverageMark)
-                        {
-                            (array[j], array[j + 1]) = (array[j + 1], array[j]);
-                        }
-                    }
-                }
+                Array.Sort(array, (a, b) => b.AverageMark.CompareTo(a.AverageMark));
             }
 
             public void Print()
             {
-                Console.WriteLine($"Группа: {Name}, средний балл группы: {AverageMark:F2}");
-                Console.WriteLine("Список студентов:");
-                for (int i = 0; i < Students.Length; i++)
-                {
-                    Console.Write("  ");
-                    Students[i].Print();
-                }
+                Console.WriteLine($"Name: {Name}");
+                Console.WriteLine($"Average mark: {AverageMark}");
             }
         }
     }
