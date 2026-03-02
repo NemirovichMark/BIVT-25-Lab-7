@@ -32,13 +32,7 @@ namespace Lab7.Purple
           return _totalMark;
         }
       }
-      public int Score
-      {
-        get
-        {
-          return _places.Sum();
-        }
-      }
+      public int Score { get { return _places.Sum(); } }
 
       // Конструкторы
       public Participant(string name, string surname)
@@ -99,3 +93,4 @@ namespace Lab7.Purple
     }
   }
 }
+
