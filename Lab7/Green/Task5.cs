@@ -12,7 +12,7 @@ namespace Lab7.Green
             {
                 _name = name;
                 _surname = surname;
-                _marks = new int[5]; 
+                _marks = new int[5];
             }
 
             public string Name => _name;
@@ -24,15 +24,27 @@ namespace Lab7.Green
                 get
                 {
                     if (_marks == null) return 0;
-                    return _marks.Where(m => m > 0).DefaultIfEmpty(0).Average();
+
+                    int sum = 0;
+                    int count = 0;
+
+                    foreach (int m in _marks)
+                    {
+                        if (m != 0)
+                        {
+                            sum += m;
+                            count++;
+                        }
+                    }
+                    if (count == 0) return 0;
+
+                    return (double)sum / count;
                 }
             }
 
             public void Exam(int mark)
             {
                 if (_marks == null) return;
-
-                
                 for (int i = 0; i < _marks.Length; i++)
                 {
                     if (_marks[i] == 0)
@@ -56,12 +68,12 @@ namespace Lab7.Green
             public Group(string name)
             {
                 _name = name;
-                _students = new Student[0];  
+                _students = new Student[0];
             }
 
             public string Name => _name;
 
-            
+
             public Student[] Students => _students.ToArray();
 
             public double AverageMark
@@ -69,12 +81,10 @@ namespace Lab7.Green
                 get
                 {
                     if (_students == null || _students.Length == 0) return 0;
-
-                    
                     double sum = 0;
-                    foreach (var student in _students)
+                    foreach (var s in _students)
                     {
-                        sum += student.AverageMark;
+                        sum += s.AverageMark;
                     }
                     return sum / _students.Length;
                 }
@@ -90,19 +100,34 @@ namespace Lab7.Green
             {
                 if (students == null) return;
                 if (_students == null) _students = new Student[0];
-
-                int oldLength = _students.Length;
-                Array.Resize(ref _students, oldLength + students.Length);
-
+                Array.Resize(ref _students, _students.Length + students.Length);
                 for (int i = 0; i < students.Length; i++)
                 {
-                    _students[oldLength + i] = students[i];
+                    _students[_students.Length - students.Length + i] = students[i];
                 }
             }
             public static void SortByAverageMark(Group[] array)
             {
+                
                 if (array == null) return;
-                Array.Sort(array, (a, b) => b.AverageMark.CompareTo(a.AverageMark));
+
+                int n = array.Length;
+                for (int i = 0; i < n - 1; i++)
+                {
+                    
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        
+                        
+                        if (array[j].AverageMark < array[j + 1].AverageMark)
+                        {
+                            
+                            Group temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
             }
 
             public void Print()
