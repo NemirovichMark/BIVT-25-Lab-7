@@ -109,8 +109,11 @@ namespace Lab7.Purple
             {
                 Sportsman[] arr1 = group1.Sportsmen ?? new Sportsman[0];
                 Sportsman[] arr2 = group2.Sportsmen ?? new Sportsman[0];
+
                 Sportsman[] merged = new Sportsman[arr1.Length + arr2.Length];
+
                 int i = 0, j = 0, k = 0;
+
                 while (i < arr1.Length && j < arr2.Length)
                 {
                     if (arr1[i].Time <= arr2[j].Time)
@@ -120,10 +123,14 @@ namespace Lab7.Purple
                 }
                 while (i < arr1.Length)
                     merged[k++] = arr1[i++];
+
                 while (j < arr2.Length)
                     merged[k++] = arr2[j++];
+
                 Group newGroup = new Group("Финалисты");
+
                 newGroup._sportsmen = merged;
+
                 return newGroup;
             }
 
