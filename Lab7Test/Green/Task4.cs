@@ -34,8 +34,8 @@ namespace Lab7Test.Green
         {
             var type = typeof(Lab7.Green.Task4.Participant);
             Assert.IsTrue(type.IsValueType, "Participant должен быть структурой");
-            Assert.AreEqual(type.GetFields().Count(f => f.IsPublic), 0);
-            Assert.IsTrue(type.GetProperty("Name")?.CanRead ?? false, "Нет свойства Name");
+			Assert.AreEqual(type.GetFields().Count(f => f.IsPublic), 0);
+			Assert.IsTrue(type.GetProperty("Name")?.CanRead ?? false, "Нет свойства Name");
             Assert.IsTrue(type.GetProperty("Surname")?.CanRead ?? false, "Нет свойства Surname");
             Assert.IsTrue(type.GetProperty("Jumps")?.CanRead ?? false, "Нет свойства Jumps");
             Assert.IsTrue(type.GetProperty("BestJump")?.CanRead ?? false, "Нет свойства BestJump");
@@ -43,14 +43,14 @@ namespace Lab7Test.Green
             Assert.IsFalse(type.GetProperty("Surname")?.CanWrite ?? false, "Свойство Surname должно быть только для чтения");
             Assert.IsFalse(type.GetProperty("Jumps")?.CanWrite ?? false, "Свойство Jumps должно быть только для чтения");
             Assert.IsFalse(type.GetProperty("BestJump")?.CanWrite ?? false, "Свойство BestJump должно быть только для чтения");
-            Assert.IsNotNull(type.GetConstructor(BindingFlags.Instance | BindingFlags.Public, null, new[] { typeof(string), typeof(string) }, null), "Нет публичного конструктора Participant(string name, string surname)");
-            Assert.IsNotNull(type.GetMethod("Jump", BindingFlags.Instance | BindingFlags.Public, null, new[] { typeof(double) }, null), "Нет публичного метода Jump(double result)");
-            Assert.IsNotNull(type.GetMethod("Sort", BindingFlags.Static | BindingFlags.Public, null, new[] { typeof(Lab7.Green.Task4.Participant[]) }, null), "Нет публичного статического метода Sort(Participant[] array)");
-            Assert.IsNotNull(type.GetMethod("Print", BindingFlags.Instance | BindingFlags.Public, null, Type.EmptyTypes, null), "Нет публичного метода Print()");
-            Assert.AreEqual(type.GetProperties().Count(f => f.PropertyType.IsPublic), 4);
-            Assert.AreEqual(type.GetConstructors().Count(f => f.IsPublic), 1);
-            Assert.AreEqual(type.GetMethods().Count(f => f.IsPublic), 11);
-        }
+			Assert.IsNotNull(type.GetConstructor(BindingFlags.Instance | BindingFlags.Public, null, new[] { typeof(string), typeof(string) }, null), "Нет публичного конструктора Participant(string name, string surname)");
+			Assert.IsNotNull(type.GetMethod("Jump", BindingFlags.Instance | BindingFlags.Public, null, new[] { typeof(double) }, null), "Нет публичного метода Jump(double result)");
+			Assert.IsNotNull(type.GetMethod("Sort", BindingFlags.Static | BindingFlags.Public, null, new[] { typeof(Lab7.Green.Task4.Participant[]) }, null), "Нет публичного статического метода Sort(Participant[] array)");
+			Assert.IsNotNull(type.GetMethod("Print", BindingFlags.Instance | BindingFlags.Public, null, Type.EmptyTypes, null), "Нет публичного метода Print()");
+			Assert.AreEqual(type.GetProperties().Count(f => f.PropertyType.IsPublic), 4);
+			Assert.AreEqual(type.GetConstructors().Count(f => f.IsPublic), 1);
+			Assert.AreEqual(type.GetMethods().Count(f => f.IsPublic), 11);
+		}
 
         [TestMethod]
         public void Test_01_Create()
