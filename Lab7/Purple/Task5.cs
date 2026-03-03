@@ -53,7 +53,7 @@ namespace Lab7.Purple
 	private Response[] _responses;
 
 	public string Name => _name;
-	public Response[] Responses => (Response[])_responses.Clone();
+	public Response[] Responses => _responses;
 
 	public Research(string name)
 	{
@@ -78,12 +78,12 @@ namespace Lab7.Purple
 
 	public string[] GetTopResponses(int question)
 	{
-	  Dictionary<string, int> data = new Dictionary<string, int>(0);
-	  /*for (int i = 0; i < _responses.Length; i++)
+	  Dictionary<string, int> data = new Dictionary<string, int>();
+	  for (int i = 0; i < _responses.Length; i++)
 	  {
 	    switch (question){
 	      case 1:
-		if (Responses[i].Animal == null) continue;
+		if (Responses[i].Animal == null) {break;}
 		data[Responses[i].Animal] = 0;
 		break;
 	      case 2:
@@ -100,7 +100,7 @@ namespace Lab7.Purple
 	  {
 	    switch (question){
 	      case 1:
-		if (Responses[i].Animal == null) break;
+		if (Responses[i].Animal == null) {break;}
 		data[Responses[i].Animal]++;
 		break;
 	      case 2:
@@ -112,20 +112,36 @@ namespace Lab7.Purple
 		data[Responses[i].Concept]++;
 		break;
 	    }
-	  }*/
+	  }
 
+	  //if (data.ContainsKey("Тануки"))throw new Exception(data["Панда"].ToString());
+	  data = data.OrderByDescending(data => data.Value).ToDictionary<string, int>();
+
+	  string[] answer = new string[Math.Min(5, data.Count)];
+	  int done = 0;
+	  foreach (KeyValuePair<string, int> a in data){
+	    if (done >= 5) break;
+	    answer[done++] = a.Key;
+	  }
+/*
 	  int[] counts = new int[Responses.Length];
 
 	  for (int i = 0; i < Responses.Length; i++){
 	    for (int j = 0; j < Responses.Length; j++){
 	      switch (question){
 		case 1:
+		  if (Responses[i].Animal == null) break;
+		  if (Responses[j].Animal == null) break;
 		  if (Responses[i].Animal == Responses[j].Animal) counts[i]++;
 		  break;
 		case 2:
+		  if (Responses[i].CharacterTrait == null) break;
+		  if (Responses[j].CharacterTrait == null) break;
 		  if (Responses[i].CharacterTrait == Responses[j].CharacterTrait) counts[i]++;
 		  break;
 		case 3:
+		  if (Responses[i].Concept == null) break;
+		  if (Responses[j].Concept == null) break;
 		  if (Responses[i].Concept == Responses[j].Concept) counts[i]++;
 		  break;
 	      }
@@ -133,7 +149,7 @@ namespace Lab7.Purple
 	  }
 
 	  Response[] temp = new Response[0];
-	  temp = Responses;
+	  temp = Responses.ToArray();
 
 	  int pos = 1;
 	  while (pos < counts.Length)
@@ -153,7 +169,7 @@ namespace Lab7.Purple
 	    }
 	  }
 	  
-	  string[] ans = new string[5];
+	  string[] ans = new string[0];
 	  int found = 0;
 	  int ind = 0;
 	  string last = "";
@@ -162,24 +178,29 @@ namespace Lab7.Purple
 	    string cur = "";
 	    switch (question){
 	      case 1:
+		if (Responses[ind].Animal == null) break;
 		cur = Responses[ind].Animal;
 		break;
 	      case 2:
+		if (Responses[ind].CharacterTrait == null) break;
 		cur = Responses[ind].CharacterTrait;
 		break;
 	      case 3:
+		if (Responses[ind].Concept == null) break;
 		cur = Responses[ind].Concept;
 		break;
 	    }
+	    if (cur == null) {ind++; continue;}
 	    if (cur != last){
-	      ans[found++] = cur;
+	      ans = ans.Append(cur).ToArray();
 	      last = cur;
+	      found++;
 	    }
 	    ind++;
 	  }
 
-
-	  return ans;
+*/
+	  return answer;
 	}
 
 	public void Print()
