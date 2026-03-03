@@ -1,0 +1,35 @@
+namespace ConsoleApp4;
+
+public struct Dogs
+{
+    // Поля 
+    private string _name;
+    private int _old;
+    private string _breed;
+    private int _weight;
+    private string _color;
+    private string _legs_weigth;
+    private int _id;
+
+
+    // Свойства
+    public string Name => _name;
+    public int Old => _old;
+    public string Breed => _breed;
+    public int Weigth => _weight;
+    public string Color => _color;
+    public string Legs_weight => _legs_weigth;
+    
+    
+    // Конструктор
+
+    public Dogs(string name, int old, string breed, int weigth, string color, string gender)
+    {
+        _name = name;
+        _old = old;
+        _breed = breed;
+        _weight = weigth;
+        _color = color;
+    }
+
+}
