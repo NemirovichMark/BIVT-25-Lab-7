@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Gener gener1 = new Gener("thriller", 15);
+            Comedy comedy1 = new Comedy("elki", 10, "2025");
+
+            Gener hiddenComedy = new Comedy("kak ya stal rus", 1, "2025");
+
+            hiddenComedy.Method();
+            hiddenComedy.print();
+
+
+            //Gener gener2 = new Comedy()     (srabotaet)
+            //Comedy comedy2 = new Gener()    (ne rabotaet)
+
+            //gener1.Method();
+            //gener1.print();
+
+            //comedy1.Method();
+            //comedy1.print();
+
+            Gener[] queue = new Gener[] { gener1, comedy1, hiddenComedy };
+
+            for (int i = 0; i < queue.Length; i++)
+            {
+                if (queue[i] is Comedy)
+                {
+                    Comedy s = queue[i] as Comedy;
+                    Console.WriteLine(s.god);
+                }
+            }
+        }
+    }
+    public class Gener
+    {
+        protected string _name;
+        protected int _age;
+
+        public Gener(string name, int age)
+        {
+            _name = name;
+            _age = age;
+
+        }
+
+        public void Method()
+        {
+            Console.WriteLine("Gener Method");
+        }
+
+        public virtual void print()
+        {
+            Console.WriteLine($"Gener: name = {_name}, age = {_age}");
+        }
+    }
+
+    public class Comedy : Gener
+    {
+        private string _godvihoda;
+
+        public string god => _godvihoda;
+        public Comedy(string name, int age, string godvihoda) : base(name, age)
+        {
+            _godvihoda = godvihoda;
+        }
+
+        public new void Method() //сокрытием метода
+        {
+            Console.WriteLine("Comedy Method");
+        }
+
+
+        public override void print()//переопределение метода
+        {
+            Console.WriteLine($"Comedy: name = {_name}, age = {_age}, godvihoda = {_godvihoda}");
+        }
+    }
+}
