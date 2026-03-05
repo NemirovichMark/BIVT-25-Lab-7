@@ -34,3 +34,5 @@ namespace Lab7Test.Green
         {
             var type = typeof(Lab7.Green.Task2.Student);
             Assert.IsTrue(type.IsValueType, "Student должен быть структурой");
+        }
+
