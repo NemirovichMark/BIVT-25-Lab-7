@@ -1,4 +1,5 @@
-using System.Xml.Linq;
+using System;
+using System.Linq;
 
 namespace Lab7.Green
 {
@@ -6,25 +7,21 @@ namespace Lab7.Green
     {
         public struct Participant
         {
-            //приват поля
             private string _surname;
             private string _group;
             private string _trainer;
-            private double _result = 0;
+            private double _result;
 
-            private static double _standard;
-
-            //статическое поле и свойство пассед
+            private static readonly double _standard;
             private static int _passed;
-            public static int Passed => _passed;
 
-            //свойства
             public string Surname => _surname;
             public string Group => _group;
             public string Trainer => _trainer;
             public double Result => _result;
 
-            //публичное лог свойство
+            public static int PassedTheStandard => _passed;
+
             public bool HasPassed => _result <= _standard && _result > 0;
 
             static Participant()
@@ -38,12 +35,12 @@ namespace Lab7.Green
                 _surname = surname;
                 _group = group;
                 _trainer = trainer;
+                _result = 0;
             }
 
-            //метод
             public void Run(double result)
             {
-                if (_result == 0)
+                if (_result == 0 && result > 0)
                 {
                     _result = result;
                     if (HasPassed)
@@ -55,10 +52,7 @@ namespace Lab7.Green
 
             public void Print()
             {
-                Console.WriteLine(_surname);
-                Console.WriteLine(_group);
-                Console.WriteLine(_trainer);
-                Console.WriteLine(_result);
+                Console.WriteLine($"{_surname} {_group} {_trainer} {_result} {HasPassed}");
             }
         }
     }
