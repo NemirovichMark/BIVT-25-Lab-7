@@ -35,4 +35,6 @@ namespace Lab7Test.Green
             var type = typeof(Lab7.Green.Task3.Student);
 			Assert.AreEqual(type.GetFields().Count(f => f.IsPublic), 0);
 		}
+	}
+}
 
