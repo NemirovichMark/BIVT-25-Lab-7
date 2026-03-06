@@ -1,6 +1,8 @@
 ﻿namespace Lab7.Blue
 {
-    public class Task1
+        public class Task1
     {
+        
     }
 }
+
