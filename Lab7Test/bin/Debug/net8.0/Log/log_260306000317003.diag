@@ -1,0 +1,44 @@
+2026-03-06T00:03:17.0076124+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-03-06T00:03:17.0164555+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-03-06T00:03:17.0173844+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-03-06T00:03:17.0173872+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 00:03:16.989
+2026-03-06T00:03:17.0183829+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 14816
+2026-03-06T00:03:17.0184593+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.24
+2026-03-06T00:03:17.0184681+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.24\System.Private.CoreLib.dll
+2026-03-06T00:03:17.0184777+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-03-06T00:03:17.0184790+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-06T00:03:17.0186268+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --results-directory C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7\TestResults --client-port 61659'
+2026-03-06T00:03:17.0195633+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-03-06T00:03:17.0375682+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-03-06T00:03:17.0480111+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-03-06T00:03:17.1620045+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-03-06T00:03:17.1872794+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-03-06T00:03:17.1905465+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2026-03-06T00:03:17.2163627+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 17 tests from source C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-06T00:03:17.2331176+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-06T00:03:17.2385896+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Включена параллелизация тестов для C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (рабочие роли: 1, область: MethodLevel)
+2026-03-06T00:03:17.2456879+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-06T00:03:17.2836188+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-06T00:03:17.2872715+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-06T00:03:17.2885308+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-06T00:03:17.2886202+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-03-06T00:03:17.2901088+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-03-06T00:03:17.2901748+00:00 mstest-trace INFORMATION Executing test Test_03_Exam
+2026-03-06T00:03:17.2918243+00:00 mstest-trace INFORMATION Executed test Test_03_Exam
+2026-03-06T00:03:17.2918883+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-03-06T00:03:17.2934736+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-03-06T00:03:17.2935405+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-03-06T00:03:17.3057403+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-03-06T00:03:17.3057709+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Green.Task2.Test_05_ArrayLinq failed. ErrorMessage:Сбой Assert.AreEqual. Между ожидаемым значением <3,75> и фактическим значением <-1> требуется разница не более чем <0,0001>. , ErrorStackTrace:   at Lab7Test.Green.Task2.CheckStruct(Boolean marksExpected, Boolean sorted) in C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\Green\Task2.cs:line 144
+   at Lab7Test.Green.Task2.Test_05_ArrayLinq() in C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\Green\Task2.cs:line 91
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-03-06T00:03:17.3058934+00:00 mstest-trace INFORMATION Executing test Test_03_Exam
+2026-03-06T00:03:17.3095949+00:00 mstest-trace INFORMATION Executed test Test_03_Exam
+2026-03-06T00:03:17.3096182+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Green.Task3.Test_03_Exam failed. ErrorMessage:Сбой Assert.AreEqual. Между ожидаемым значением <2,5> и фактическим значением <3> требуется разница не более чем <0,0001>. , ErrorStackTrace:   at Lab7Test.Green.Task3.CheckStruct(Boolean marksExpected, Boolean sorted) in C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\Green\Task3.cs:line 143
+   at Lab7Test.Green.Task3.Test_03_Exam() in C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\Green\Task3.cs:line 73
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-03-06T00:03:17.3098352+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll

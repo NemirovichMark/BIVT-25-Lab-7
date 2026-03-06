@@ -1,0 +1,40 @@
+2026-03-06T00:46:42.4416997+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-03-06T00:46:42.4501478+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-03-06T00:46:42.4510823+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-03-06T00:46:42.4510851+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 00:46:42.422
+2026-03-06T00:46:42.4521756+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 14008
+2026-03-06T00:46:42.4522860+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.24
+2026-03-06T00:46:42.4522964+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.24\System.Private.CoreLib.dll
+2026-03-06T00:46:42.4523043+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-03-06T00:46:42.4523066+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-06T00:46:42.4525230+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --results-directory C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7\TestResults --client-port 53109'
+2026-03-06T00:46:42.4536494+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-03-06T00:46:42.4718942+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-03-06T00:46:42.4817110+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-03-06T00:46:42.5926161+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-03-06T00:46:42.6176131+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-03-06T00:46:42.6206020+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2026-03-06T00:46:42.6472972+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 32 tests from source C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-06T00:46:42.6641215+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-06T00:46:42.6691161+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Включена параллелизация тестов для C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (рабочие роли: 1, область: MethodLevel)
+2026-03-06T00:46:42.6770244+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-06T00:46:42.7155942+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-06T00:46:42.7192099+00:00 mstest-trace INFORMATION Executing test Test_01_CreateS
+2026-03-06T00:46:42.7212675+00:00 mstest-trace INFORMATION Executed test Test_01_CreateS
+2026-03-06T00:46:42.7213567+00:00 mstest-trace INFORMATION Executing test Test_02_InitS
+2026-03-06T00:46:42.7226802+00:00 mstest-trace INFORMATION Executed test Test_02_InitS
+2026-03-06T00:46:42.7227448+00:00 mstest-trace INFORMATION Executing test Test_03_Exams
+2026-03-06T00:46:42.7242740+00:00 mstest-trace INFORMATION Executed test Test_03_Exams
+2026-03-06T00:46:42.7243382+00:00 mstest-trace INFORMATION Executing test Test_04_ArrayLinq
+2026-03-06T00:46:42.7252590+00:00 mstest-trace INFORMATION Executed test Test_04_ArrayLinq
+2026-03-06T00:46:42.7253246+00:00 mstest-trace INFORMATION Executing test Test_05_CreateG
+2026-03-06T00:46:42.7287360+00:00 mstest-trace INFORMATION Executed test Test_05_CreateG
+2026-03-06T00:46:42.7288002+00:00 mstest-trace INFORMATION Executing test Test_06_FillG
+2026-03-06T00:46:42.7298981+00:00 mstest-trace INFORMATION Executed test Test_06_FillG
+2026-03-06T00:46:42.7299653+00:00 mstest-trace INFORMATION Executing test Test_07_FillManyGroups
+2026-03-06T00:46:42.7310211+00:00 mstest-trace INFORMATION Executed test Test_07_FillManyGroups
+2026-03-06T00:46:42.7310848+00:00 mstest-trace INFORMATION Executing test Test_08_ArrayLinqG
+2026-03-06T00:46:42.7319876+00:00 mstest-trace INFORMATION Executed test Test_08_ArrayLinqG
+2026-03-06T00:46:42.7320468+00:00 mstest-trace INFORMATION Executing test Test_09_Sort
+2026-03-06T00:46:42.7341027+00:00 mstest-trace INFORMATION Executed test Test_09_Sort
+2026-03-06T00:46:42.7343807+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\harneizel\source\repos\harneizel\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
