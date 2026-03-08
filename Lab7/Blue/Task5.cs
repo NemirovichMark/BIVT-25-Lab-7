@@ -4,24 +4,29 @@ namespace Lab7.Blue
     {
         public struct Sportsman
         {
-            private string _name;
-            private string _surname;
+            private string _firstName;
+            private string _lastName;
             private int _place;
+            private bool _isPlaceSet;
 
-            public string Name => _name;
-            public string Surname => _surname;
+            public string Name => _firstName;
+            public string Surname => _lastName;
             public int Place => _place;
 
             public Sportsman(string name, string surname)
             {
-                _name = name;
-                _surname = surname;
+                _firstName = name;
+                _lastName = surname;
                 _place = 0;
+                _isPlaceSet = false;
             }
 
             public void SetPlace(int place)
             {
-                if (_place == 0) _place = place;
+                if (place < 0) return;
+                if (_isPlaceSet) return;
+                _place = place;
+                _isPlaceSet = true;
             }
 
             public void Print()
@@ -32,21 +37,19 @@ namespace Lab7.Blue
 
         public struct Team
         {
-            private string _name;
-            private Sportsman[] _sportsmen;
-            private int _count;
+            private string _teamName;
+            private Sportsman[] _teamMembers;
+            private int _memberCount;
 
-            public string Name => _name;
+            public string Name => _teamName;
 
             public Sportsman[] Sportsmen
             {
                 get
                 {
-                    Sportsman[] copy = new Sportsman[_sportsmen.Length];
-                    for (int i = 0; i < _sportsmen.Length; i++)
-                    {
-                        copy[i] = _sportsmen[i];
-                    }
+                    Sportsman[] copy = new Sportsman[_memberCount];
+                    for (int i = 0; i < _memberCount; i++)
+                        copy[i] = _teamMembers[i];
                     return copy;
                 }
             }
@@ -55,17 +58,16 @@ namespace Lab7.Blue
             {
                 get
                 {
-                    int sum = 0;
-                    for (int i = 0; i < _count; i++)
+                    int total = 0;
+                    for (int i = 0; i < _memberCount; i++)
                     {
-                        int place = _sportsmen[i].Place;
-                        if (place == 1) sum += 5;
-                        else if (place == 2) sum += 4;
-                        else if (place == 3) sum += 3;
-                        else if (place == 4) sum += 2;
-                        else if (place == 5) sum += 1;
+                        if (_teamMembers[i].Place == 1) total += 5;
+                        else if (_teamMembers[i].Place == 2) total += 4;
+                        else if (_teamMembers[i].Place == 3) total += 3;
+                        else if (_teamMembers[i].Place == 4) total += 2;
+                        else if (_teamMembers[i].Place == 5) total += 1;
                     }
-                    return sum;
+                    return total;
                 }
             }
 
@@ -73,68 +75,61 @@ namespace Lab7.Blue
             {
                 get
                 {
-                    int best = 100;
-                    for (int i = 0; i < _count; i++)
+                    if (_memberCount == 0) return 0;
+                    
+                    int best = _teamMembers[0].Place;
+                    for (int i = 1; i < _memberCount; i++)
                     {
-                        int p = _sportsmen[i].Place;
-                        if (p > 0 && p < best) best = p;
+                        if (_teamMembers[i].Place < best)
+                            best = _teamMembers[i].Place;
                     }
-                    return best == 100 ? 0 : best;
+                    return best;
                 }
             }
 
             public Team(string name)
             {
-                _name = name;
-                _sportsmen = new Sportsman[6];
-                _count = 0;
+                _teamName = name;
+                _teamMembers = new Sportsman[6];
+                _memberCount = 0;
             }
 
-            public void Add(Sportsman s)
+            public void Add(Sportsman sportsman)
             {
-                if (_count < 6)
-                {
-                    _sportsmen[_count] = s;
-                    _count++;
-                }
+                if (_memberCount >= 6) return;
+                _teamMembers[_memberCount] = sportsman;
+                _memberCount++;
             }
 
-            public void Add(Sportsman[] arr)
+            public void Add(Sportsman[] sportsmen)
             {
-                for (int i = 0; i < arr.Length; i++)
-                {
-                    Add(arr[i]);
-                }
-            }
-
-            private static bool HasFirstPlace(Team t)
-            {
-                for (int i = 0; i < t._count; i++)
-                {
-                    if (t._sportsmen[i].Place == 1) return true;
-                }
-                return false;
+                if (_memberCount >= 6) return;
+                
+                for (int i = 0; i < sportsmen.Length; i++)
+                    Add(sportsmen[i]);
             }
 
             public static void Sort(Team[] teams)
             {
-                for (int i = 0; i < teams.Length - 1; i++)
+                if (teams == null || teams.Length <= 1) return;
+                
+                for (int i = 0; i < teams.Length; i++)
                 {
-                    for (int j = 0; j < teams.Length - 1 - i; j++)
+                    for (int j = 1; j < teams.Length - i; j++)
                     {
-                        if (teams[j].TotalScore < teams[j + 1].TotalScore)
+                        if (teams[j - 1].TotalScore < teams[j].TotalScore)
                         {
-                            Team temp = teams[j];
-                            teams[j] = teams[j + 1];
-                            teams[j + 1] = temp;
+                            Team temp = teams[j - 1];
+                            teams[j - 1] = teams[j];
+                            teams[j] = temp;
                         }
-                        else if (teams[j].TotalScore == teams[j + 1].TotalScore)
+                        else if (teams[j - 1].TotalScore == teams[j].TotalScore)
                         {
-                            if (HasFirstPlace(teams[j + 1]) && !HasFirstPlace(teams[j]))
+                            if (teams[j - 1].TopPlace > teams[j].TopPlace)
                             {
-                                Team temp = teams[j];
-                                teams[j] = teams[j + 1];
-                                teams[j + 1] = temp;
+                                Team temp = teams[j - 1];
+                                teams[j - 1] = teams[j];
+                                teams[j] = temp;
                             }
                         }
                     }
@@ -148,4 +143,3 @@ namespace Lab7.Blue
         }
     }
 }
-```
