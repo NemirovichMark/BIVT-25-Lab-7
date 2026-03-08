@@ -43,7 +43,11 @@
             //methods
             public void PlayMatch(int time)
             {
-                
+                if (time >= 0)
+                {
+                    Array.Resize(ref _penaltyTimes, _penaltyTimes.Length + 1);
+                    _penaltyTimes[_penaltyTimes.Length - 1] = time;
+                }
             }
 
             public static void Sort(Participant[] array)

@@ -1,0 +1,27 @@
+2026-03-08T10:35:24.5645852+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-03-08T10:35:24.5852342+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-03-08T10:35:24.5874680+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-03-08T10:35:24.5874752+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 10:35:24.516
+2026-03-08T10:35:24.5899054+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 28112
+2026-03-08T10:35:24.5900856+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2026-03-08T10:35:24.5901002+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2026-03-08T10:35:24.5901139+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-03-08T10:35:24.5901177+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T10:35:24.5904132+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 58413'
+2026-03-08T10:35:24.5926564+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-03-08T10:35:24.6349041+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-03-08T10:35:24.6575958+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-03-08T10:35:24.9099363+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-03-08T10:35:24.9245708+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2026-03-08T10:35:24.9644869+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-03-08T10:35:24.9712534+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-03-08T10:35:25.0284054+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 26 tests from source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T10:35:25.0801349+00:00 mstest-trace INFORMATION Created unit-test runner C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T10:35:25.0924555+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-03-08T10:35:25.1080687+00:00 mstest-trace INFORMATION Executing test Test_09_MergeFinalists
+2026-03-08T10:35:25.2631679+00:00 mstest-trace INFORMATION Executed test Test_09_MergeFinalists
+2026-03-08T10:35:25.2668086+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task4.Test_09_MergeFinalists failed. ErrorMessage:Сбой Assert.AreEqual. Ожидается: <Волки>. Фактически: <Быки>. , ErrorStackTrace:   at Lab7Test.Blue.Task4.Test_09_MergeFinalists() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task4.cs:line 154
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-03-08T10:35:25.2715315+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
