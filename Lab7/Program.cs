@@ -5,7 +5,7 @@ namespace Lab7
         public static void Main()
         {
             // ПРОСТАЯ ПРОВЕРКА ВСЕХ ЗАДАНИЙ
-            Console.WriteLine("ПРОВЕРКА ЗАДАНИЙ БЕЛОЙ ЛИГИ");
+            Console.WriteLine("ПРОВЕРКА ЗАДАНИЙ");
             Console.WriteLine("===========================\n");
 
             // Задание 1
@@ -132,3 +132,4 @@ namespace Lab7
             Console.WriteLine("\n=========== ВСЕ ПРОВЕРЕНО ===========");
         }
     }
+
