@@ -162,4 +162,3 @@ namespace Lab7.Blue
         }
     }
 }
-```
