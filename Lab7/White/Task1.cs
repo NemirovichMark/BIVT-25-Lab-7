@@ -15,7 +15,7 @@ namespace Lab7.White
         public Participant(string surname, string club)
         {
             this.surname = surname;   // this.surname - поле структуры
-            this.club = club;         // surname - параметр конструктора
+            this.club = club;         // club - параметр конструктора
             firstJump = 0;             // сначала прыжков нет
             secondJump = 0;
         }
@@ -90,46 +90,6 @@ namespace Lab7.White
             Console.WriteLine($"2-й прыжок: {secondJump:F2} м");
             Console.WriteLine($"Сумма: {JumpSum:F2} м");
             Console.WriteLine(new string('-', 30));
-        }
-    }
-
-    // Класс для тестирования
-    class Program
-    {
-        static void Main()
-        {
-            // Создаем массив участников
-            Participant[] participants = new Participant[3];
-
-            // Заполняем данные
-            participants[0] = new Participant("Иванов", "Динамо");
-            participants[1] = new Participant("Петров", "Спартак");
-            participants[2] = new Participant("Сидоров", "ЦСКА");
-
-            // Добавляем результаты прыжков
-            participants[0].Jump(7.85);
-            participants[0].Jump(8.12);
-
-            participants[1].Jump(7.92);
-            participants[1].Jump(7.88);
-
-            participants[2].Jump(8.05);
-            // у Сидорова только один прыжок
-
-            Console.WriteLine("ДО СОРТИРОВКИ:");
-            foreach (var p in participants)
-            {
-                p.Print();
-            }
-
-            // Сортируем
-            Participant.Sort(participants);
-
-            Console.WriteLine("ПОСЛЕ СОРТИРОВКИ (по убыванию суммы):");
-            foreach (var p in participants)
-            {
-                p.Print();
-            }
         }
     }
 }
