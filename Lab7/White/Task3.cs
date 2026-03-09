@@ -1,7 +1,10 @@
 using System;
 
+
 namespace Lab7.White
 {
+   public class Task3
+   {
    public struct Student
 {
     private string name;
@@ -69,5 +72,6 @@ namespace Lab7.White
         Console.WriteLine($"{name} {surname} Avg:{AverageMark} Skipped:{skipped}");
     }
   }
+}
 }
 
