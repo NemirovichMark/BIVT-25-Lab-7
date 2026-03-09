@@ -1,6 +1,135 @@
-﻿namespace Lab7.White
+using System;
+
+namespace Lab7.White
 {
-    public class Task1
+    // Структура "Участник соревнований"
+    public struct Participant
     {
+        // Приватные поля (скрыты от прямого доступа)
+        private string surname;      // фамилия
+        private string club;         // название клуба
+        private double firstJump;    // результат первого прыжка
+        private double secondJump;   // результат второго прыжка
+
+        // Конструктор - вызывается при создании участника
+        public Participant(string surname, string club)
+        {
+            this.surname = surname;   // this.surname - поле структуры
+            this.club = club;         // surname - параметр конструктора
+            firstJump = 0;             // сначала прыжков нет
+            secondJump = 0;
+        }
+
+        // Свойства только для чтения (можно получить, нельзя изменить)
+        public string Surname
+        {
+            get { return surname; }
+        }
+
+        public string Club
+        {
+            get { return club; }
+        }
+
+        public double FirstJump
+        {
+            get { return firstJump; }
+        }
+
+        public double SecondJump
+        {
+            get { return secondJump; }
+        }
+
+        // Свойство для суммы двух прыжков
+        public double JumpSum
+        {
+            get { return firstJump + secondJump; }
+        }
+
+        // Метод для добавления результата прыжка
+        public void Jump(double result)
+        {
+            if (firstJump == 0)           // если первый прыжок еще не сделан
+            {
+                firstJump = result;        // записываем в первый прыжок
+            }
+            else if (secondJump == 0)      // если первый уже есть
+            {
+                secondJump = result;       // записываем во второй прыжок
+            }
+            // если оба прыжка уже есть - ничего не делаем
+        }
+
+        // Статический метод сортировки массива участников
+        public static void Sort(Participant[] array)
+        {
+            // Пузырьковая сортировка (простая и понятная)
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = 0; j < array.Length - 1 - i; j++)
+                {
+                    // Сравниваем суммы прыжков
+                    if (array[j].JumpSum < array[j + 1].JumpSum)
+                    {
+                        // Меняем местами (по убыванию)
+                        Participant temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        // Метод для вывода информации об участнике
+        public void Print()
+        {
+            Console.WriteLine($"Фамилия: {surname}");
+            Console.WriteLine($"Клуб: {club}");
+            Console.WriteLine($"1-й прыжок: {firstJump:F2} м");
+            Console.WriteLine($"2-й прыжок: {secondJump:F2} м");
+            Console.WriteLine($"Сумма: {JumpSum:F2} м");
+            Console.WriteLine(new string('-', 30));
+        }
+    }
+
+    // Класс для тестирования
+    class Program
+    {
+        static void Main()
+        {
+            // Создаем массив участников
+            Participant[] participants = new Participant[3];
+
+            // Заполняем данные
+            participants[0] = new Participant("Иванов", "Динамо");
+            participants[1] = new Participant("Петров", "Спартак");
+            participants[2] = new Participant("Сидоров", "ЦСКА");
+
+            // Добавляем результаты прыжков
+            participants[0].Jump(7.85);
+            participants[0].Jump(8.12);
+
+            participants[1].Jump(7.92);
+            participants[1].Jump(7.88);
+
+            participants[2].Jump(8.05);
+            // у Сидорова только один прыжок
+
+            Console.WriteLine("ДО СОРТИРОВКИ:");
+            foreach (var p in participants)
+            {
+                p.Print();
+            }
+
+            // Сортируем
+            Participant.Sort(participants);
+
+            Console.WriteLine("ПОСЛЕ СОРТИРОВКИ (по убыванию суммы):");
+            foreach (var p in participants)
+            {
+                p.Print();
+            }
+        }
     }
 }
