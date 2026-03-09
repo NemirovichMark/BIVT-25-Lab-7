@@ -1,3 +1,5 @@
+using System;
+
 public struct Match
 {
     // ПРИВАТНЫЕ ПОЛЯ
@@ -35,3 +37,4 @@ public struct Match
         Console.WriteLine($"{goals}:{misses}");  // например "2:1"
     }
 }
+
