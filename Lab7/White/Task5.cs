@@ -1,6 +1,10 @@
 using System;
 
-public struct Match
+namespace Lab7.White
+{
+    public class Task5
+    {
+        public struct Match
 {
     // ПРИВАТНЫЕ ПОЛЯ
     private int goals;   // забитые голы
@@ -35,6 +39,8 @@ public struct Match
     public void Print()
     {
         Console.WriteLine($"{goals}:{misses}");  // например "2:1"
+    }
+}
     }
 }
 
