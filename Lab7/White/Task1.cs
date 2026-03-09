@@ -1,6 +1,68 @@
-﻿namespace Lab7.White
+namespace Lab7.White
 {
     public class Task1
     {
+        public struct Participant
+        {
+            private string _surname;
+            private string _club;
+            private double _firstJump;
+            private double _secondJump;
+            private bool _firstJumpSet;
+            private bool _secondJumpSet;
+
+            public string Surname => _surname;
+            public string Club => _club;
+            public double FirstJump => _firstJump;
+            public double SecondJump => _secondJump;
+
+            public double JumpSum
+            {
+                get
+                {
+                    double sum = _firstJump + _secondJump;
+                    return sum;
+                }
+            }
+
+            public Participant(string surname, string club)
+            {
+                _surname = surname;
+                _club = club;
+                _firstJump = 0;
+                _secondJump = 0;
+                _firstJumpSet = false;
+                _secondJumpSet = false;
+            }
+
+            public void Jump(double result)
+            {
+                if (_firstJumpSet == false)
+                {
+                    _firstJump = result;
+                    _firstJumpSet = true;
+                }
+                else if (_secondJumpSet == false)
+                {
+                    _secondJump = result;
+                    _secondJumpSet = true;
+                }
+            }
+
+            public static void Sort(Participant[] array)
+            {
+                Array.Sort(array, (a, b) => b.JumpSum.CompareTo(a.JumpSum));
+            }
+
+            public void Print()
+            {
+                Console.WriteLine($"Surname: {_surname}");
+                Console.WriteLine($"Club: {_club}");
+                Console.WriteLine($"First jump: {_firstJump}");
+                Console.WriteLine($"Second jump: {_secondJump}");
+                Console.WriteLine($"Sum: {JumpSum}");
+                Console.WriteLine("------------------------");
+            }
+        }
     }
 }
