@@ -1,0 +1,52 @@
+2026-03-02T11:03:47.2449996+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-03-02T11:03:47.2523552+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-03-02T11:03:47.2532779+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-03-02T11:03:47.2532820+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 11:03:47.226
+2026-03-02T11:03:47.2543324+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 17856
+2026-03-02T11:03:47.2544121+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2026-03-02T11:03:47.2544185+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2026-03-02T11:03:47.2544249+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-03-02T11:03:47.2544269+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-02T11:03:47.2545540+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 62296'
+2026-03-02T11:03:47.2561060+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-03-02T11:03:47.2732399+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-03-02T11:03:47.2818079+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-03-02T11:03:47.3896324+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-03-02T11:03:47.3954131+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2026-03-02T11:03:47.4113515+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-03-02T11:03:47.4141291+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-03-02T11:03:47.4365511+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 26 tests from source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-02T11:03:47.4582260+00:00 mstest-trace INFORMATION Created unit-test runner C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-02T11:03:47.4623262+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-03-02T11:03:47.4685694+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-02T11:03:47.5293891+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-02T11:03:47.5325608+00:00 mstest-trace INFORMATION Executing test Test_01_CreateTeams
+2026-03-02T11:03:47.5343927+00:00 mstest-trace INFORMATION Executed test Test_01_CreateTeams
+2026-03-02T11:03:47.5344723+00:00 mstest-trace INFORMATION Executing test Test_02_InitTeams
+2026-03-02T11:03:47.5354438+00:00 mstest-trace INFORMATION Executed test Test_02_InitTeams
+2026-03-02T11:03:47.5355027+00:00 mstest-trace INFORMATION Executing test Test_03_PlayMatches
+2026-03-02T11:03:47.5375279+00:00 mstest-trace INFORMATION Executed test Test_03_PlayMatches
+2026-03-02T11:03:47.5375843+00:00 mstest-trace INFORMATION Executing test Test_04_CreateGroups
+2026-03-02T11:03:47.5463593+00:00 mstest-trace INFORMATION Executed test Test_04_CreateGroups
+2026-03-02T11:03:47.5464246+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task4.Test_04_CreateGroups failed. ErrorMessage:Сбой Assert.IsTrue. , ErrorStackTrace:   at Lab7Test.Blue.Task4.CheckGroups(Boolean filled, Boolean sorted) in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task4.cs:line 221
+   at Lab7Test.Blue.Task4.Test_04_CreateGroups() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task4.cs:line 103
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-03-02T11:03:47.5465593+00:00 mstest-trace INFORMATION Executing test Test_05_FillGroups
+2026-03-02T11:03:47.5486584+00:00 mstest-trace INFORMATION Executed test Test_05_FillGroups
+2026-03-02T11:03:47.5487563+00:00 mstest-trace INFORMATION Executing test Test_06_FillGroups
+2026-03-02T11:03:47.5496668+00:00 mstest-trace INFORMATION Executed test Test_06_FillGroups
+2026-03-02T11:03:47.5497331+00:00 mstest-trace INFORMATION Executing test Test_07_FillGroups
+2026-03-02T11:03:47.5504374+00:00 mstest-trace INFORMATION Executed test Test_07_FillGroups
+2026-03-02T11:03:47.5504981+00:00 mstest-trace INFORMATION Executing test Test_08_SortGroups
+2026-03-02T11:03:47.5526994+00:00 mstest-trace INFORMATION Executed test Test_08_SortGroups
+2026-03-02T11:03:47.5527802+00:00 mstest-trace INFORMATION Executing test Test_09_MergeFinalists
+2026-03-02T11:03:47.5611279+00:00 mstest-trace INFORMATION Executed test Test_09_MergeFinalists
+2026-03-02T11:03:47.5611957+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task4.Test_09_MergeFinalists failed. ErrorMessage:Test method Lab7Test.Blue.Task4.Test_09_MergeFinalists threw exception: 
+System.IndexOutOfRangeException: Index was outside the bounds of the array., ErrorStackTrace:    at Lab7.Blue.Task4.Group.Merge(Group group1, Group group2, Int32 size) in C:\Develop\BIVT-25-Lab-7\Lab7\Blue\Task4.cs:line 98
+   at Lab7Test.Blue.Task4.Test_09_MergeFinalists() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task4.cs:line 148
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-03-02T11:03:47.5614371+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll

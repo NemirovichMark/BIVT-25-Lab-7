@@ -1,0 +1,93 @@
+2026-03-08T18:17:05.5450318+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-03-08T18:17:05.5657920+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-03-08T18:17:05.5682927+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-03-08T18:17:05.5683024+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 18:17:05.496
+2026-03-08T18:17:05.5705226+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 4300
+2026-03-08T18:17:05.5707419+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2026-03-08T18:17:05.5707582+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2026-03-08T18:17:05.5707749+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-03-08T18:17:05.5707801+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T18:17:05.5711870+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 54181'
+2026-03-08T18:17:05.5736125+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-03-08T18:17:05.6171400+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-03-08T18:17:05.6421369+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-03-08T18:17:05.8992843+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-03-08T18:17:05.9136902+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2026-03-08T18:17:05.9510267+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-03-08T18:17:05.9571212+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-03-08T18:17:06.0222220+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 36 tests from source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T18:17:06.0839310+00:00 mstest-trace INFORMATION Created unit-test runner C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T18:17:06.0957591+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-03-08T18:17:06.1135193+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T18:17:06.1841331+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T18:17:06.1934466+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-08T18:17:06.1991490+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-08T18:17:06.1995296+00:00 mstest-trace INFORMATION Executing test Test_02_Count
+2026-03-08T18:17:06.2020543+00:00 mstest-trace INFORMATION Executed test Test_02_Count
+2026-03-08T18:17:06.2022104+00:00 mstest-trace INFORMATION Executing test Test_02_Count_Half
+2026-03-08T18:17:06.2043183+00:00 mstest-trace INFORMATION Executed test Test_02_Count_Half
+2026-03-08T18:17:06.2044730+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T18:17:06.2148936+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T18:17:06.2156318+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-08T18:17:06.2193184+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-08T18:17:06.2194894+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-03-08T18:17:06.2211186+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-03-08T18:17:06.2212575+00:00 mstest-trace INFORMATION Executing test Test_03_Jumps
+2026-03-08T18:17:06.2234295+00:00 mstest-trace INFORMATION Executed test Test_03_Jumps
+2026-03-08T18:17:06.2235676+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-03-08T18:17:06.2276080+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-03-08T18:17:06.2278258+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-03-08T18:17:06.2299588+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-03-08T18:17:06.2301594+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T18:17:06.2424257+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T18:17:06.2426461+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-08T18:17:06.2458975+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-08T18:17:06.2460776+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-03-08T18:17:06.2477384+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-03-08T18:17:06.2479071+00:00 mstest-trace INFORMATION Executing test Test_03_PlayMatches
+2026-03-08T18:17:06.2497305+00:00 mstest-trace INFORMATION Executed test Test_03_PlayMatches
+2026-03-08T18:17:06.2498764+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-03-08T18:17:06.2531649+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-03-08T18:17:06.2533209+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-03-08T18:17:06.2549434+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-03-08T18:17:06.2554465+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T18:17:06.2701757+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T18:17:06.2704204+00:00 mstest-trace INFORMATION Executing test Test_01_CreateTeams
+2026-03-08T18:17:06.2741026+00:00 mstest-trace INFORMATION Executed test Test_01_CreateTeams
+2026-03-08T18:17:06.2742541+00:00 mstest-trace INFORMATION Executing test Test_02_InitTeams
+2026-03-08T18:17:06.2769154+00:00 mstest-trace INFORMATION Executed test Test_02_InitTeams
+2026-03-08T18:17:06.2771007+00:00 mstest-trace INFORMATION Executing test Test_03_PlayMatches
+2026-03-08T18:17:06.2822720+00:00 mstest-trace INFORMATION Executed test Test_03_PlayMatches
+2026-03-08T18:17:06.2824453+00:00 mstest-trace INFORMATION Executing test Test_04_CreateGroups
+2026-03-08T18:17:06.2848041+00:00 mstest-trace INFORMATION Executed test Test_04_CreateGroups
+2026-03-08T18:17:06.2849732+00:00 mstest-trace INFORMATION Executing test Test_05_FillGroups
+2026-03-08T18:17:06.2892076+00:00 mstest-trace INFORMATION Executed test Test_05_FillGroups
+2026-03-08T18:17:06.2893614+00:00 mstest-trace INFORMATION Executing test Test_06_FillGroups
+2026-03-08T18:17:06.2912211+00:00 mstest-trace INFORMATION Executed test Test_06_FillGroups
+2026-03-08T18:17:06.2913783+00:00 mstest-trace INFORMATION Executing test Test_07_FillGroups
+2026-03-08T18:17:06.2932691+00:00 mstest-trace INFORMATION Executed test Test_07_FillGroups
+2026-03-08T18:17:06.2934707+00:00 mstest-trace INFORMATION Executing test Test_08_SortGroups
+2026-03-08T18:17:06.2986045+00:00 mstest-trace INFORMATION Executed test Test_08_SortGroups
+2026-03-08T18:17:06.2987982+00:00 mstest-trace INFORMATION Executing test Test_09_MergeFinalists
+2026-03-08T18:17:06.3015236+00:00 mstest-trace INFORMATION Executed test Test_09_MergeFinalists
+2026-03-08T18:17:06.3017069+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T18:17:06.3135203+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T18:17:06.3137424+00:00 mstest-trace INFORMATION Executing test Test_01_CreateS
+2026-03-08T18:17:06.3159967+00:00 mstest-trace INFORMATION Executed test Test_01_CreateS
+2026-03-08T18:17:06.3161965+00:00 mstest-trace INFORMATION Executing test Test_02_InitS
+2026-03-08T18:17:06.3182518+00:00 mstest-trace INFORMATION Executed test Test_02_InitS
+2026-03-08T18:17:06.3184290+00:00 mstest-trace INFORMATION Executing test Test_03_SetPlaces
+2026-03-08T18:17:06.3201182+00:00 mstest-trace INFORMATION Executed test Test_03_SetPlaces
+2026-03-08T18:17:06.3202648+00:00 mstest-trace INFORMATION Executing test Test_04_ArrayLinq
+2026-03-08T18:17:06.3220408+00:00 mstest-trace INFORMATION Executed test Test_04_ArrayLinq
+2026-03-08T18:17:06.3221883+00:00 mstest-trace INFORMATION Executing test Test_05_CreateG
+2026-03-08T18:17:06.3343881+00:00 mstest-trace INFORMATION Executed test Test_05_CreateG
+2026-03-08T18:17:06.3346435+00:00 mstest-trace INFORMATION Executing test Test_06_FillG
+2026-03-08T18:17:06.3395436+00:00 mstest-trace INFORMATION Executed test Test_06_FillG
+2026-03-08T18:17:06.3397425+00:00 mstest-trace INFORMATION Executing test Test_07_FillManyTeams
+2026-03-08T18:17:06.3430294+00:00 mstest-trace INFORMATION Executed test Test_07_FillManyTeams
+2026-03-08T18:17:06.3432624+00:00 mstest-trace INFORMATION Executing test Test_08_ArrayLinqG
+2026-03-08T18:17:06.3456950+00:00 mstest-trace INFORMATION Executed test Test_08_ArrayLinqG
+2026-03-08T18:17:06.3458852+00:00 mstest-trace INFORMATION Executing test Test_09_Sort
+2026-03-08T18:17:06.3529563+00:00 mstest-trace INFORMATION Executed test Test_09_Sort
+2026-03-08T18:17:06.3534870+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll

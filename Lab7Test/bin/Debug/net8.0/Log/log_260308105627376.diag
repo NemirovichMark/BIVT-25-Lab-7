@@ -1,0 +1,73 @@
+2026-03-08T10:56:27.3890787+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-03-08T10:56:27.4096229+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-03-08T10:56:27.4118313+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-03-08T10:56:27.4118384+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 10:56:27.338
+2026-03-08T10:56:27.4146394+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 19792
+2026-03-08T10:56:27.4148499+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2026-03-08T10:56:27.4148659+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2026-03-08T10:56:27.4148833+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-03-08T10:56:27.4148873+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T10:56:27.4152497+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 58738'
+2026-03-08T10:56:27.4175083+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-03-08T10:56:27.4577858+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-03-08T10:56:27.4802155+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-03-08T10:56:27.7214265+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-03-08T10:56:27.7360463+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2026-03-08T10:56:27.7726535+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-03-08T10:56:27.7791991+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-03-08T10:56:27.8362541+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 26 tests from source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T10:56:27.8907079+00:00 mstest-trace INFORMATION Created unit-test runner C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-03-08T10:56:27.9008022+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-03-08T10:56:27.9159072+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T10:56:27.9829789+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T10:56:27.9905330+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-08T10:56:27.9942542+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-08T10:56:27.9944260+00:00 mstest-trace INFORMATION Executing test Test_02_Count
+2026-03-08T10:56:27.9968055+00:00 mstest-trace INFORMATION Executed test Test_02_Count
+2026-03-08T10:56:27.9969842+00:00 mstest-trace INFORMATION Executing test Test_02_Count_Half
+2026-03-08T10:56:27.9993994+00:00 mstest-trace INFORMATION Executed test Test_02_Count_Half
+2026-03-08T10:56:27.9995417+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T10:56:28.0067852+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T10:56:28.0069154+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-08T10:56:28.0110269+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-08T10:56:28.0112070+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-03-08T10:56:28.0127400+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-03-08T10:56:28.0128761+00:00 mstest-trace INFORMATION Executing test Test_03_Jumps
+2026-03-08T10:56:28.0155323+00:00 mstest-trace INFORMATION Executed test Test_03_Jumps
+2026-03-08T10:56:28.0156711+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-03-08T10:56:28.0196954+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-03-08T10:56:28.0199561+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-03-08T10:56:28.0217810+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-03-08T10:56:28.0219369+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T10:56:28.0349768+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T10:56:28.0352308+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-03-08T10:56:28.0386191+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-03-08T10:56:28.0387910+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-03-08T10:56:28.0403288+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-03-08T10:56:28.0404679+00:00 mstest-trace INFORMATION Executing test Test_03_PlayMatches
+2026-03-08T10:56:28.0422294+00:00 mstest-trace INFORMATION Executed test Test_03_PlayMatches
+2026-03-08T10:56:28.0423719+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-03-08T10:56:28.0460865+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-03-08T10:56:28.0464004+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-03-08T10:56:28.0481873+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-03-08T10:56:28.0487153+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-03-08T10:56:28.0622162+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-03-08T10:56:28.0623793+00:00 mstest-trace INFORMATION Executing test Test_01_CreateTeams
+2026-03-08T10:56:28.0659389+00:00 mstest-trace INFORMATION Executed test Test_01_CreateTeams
+2026-03-08T10:56:28.0661937+00:00 mstest-trace INFORMATION Executing test Test_02_InitTeams
+2026-03-08T10:56:28.0685741+00:00 mstest-trace INFORMATION Executed test Test_02_InitTeams
+2026-03-08T10:56:28.0688613+00:00 mstest-trace INFORMATION Executing test Test_03_PlayMatches
+2026-03-08T10:56:28.0739101+00:00 mstest-trace INFORMATION Executed test Test_03_PlayMatches
+2026-03-08T10:56:28.0740883+00:00 mstest-trace INFORMATION Executing test Test_04_CreateGroups
+2026-03-08T10:56:28.0765304+00:00 mstest-trace INFORMATION Executed test Test_04_CreateGroups
+2026-03-08T10:56:28.0767046+00:00 mstest-trace INFORMATION Executing test Test_05_FillGroups
+2026-03-08T10:56:28.0815218+00:00 mstest-trace INFORMATION Executed test Test_05_FillGroups
+2026-03-08T10:56:28.0818755+00:00 mstest-trace INFORMATION Executing test Test_06_FillGroups
+2026-03-08T10:56:28.0844616+00:00 mstest-trace INFORMATION Executed test Test_06_FillGroups
+2026-03-08T10:56:28.0846759+00:00 mstest-trace INFORMATION Executing test Test_07_FillGroups
+2026-03-08T10:56:28.0864916+00:00 mstest-trace INFORMATION Executed test Test_07_FillGroups
+2026-03-08T10:56:28.0866522+00:00 mstest-trace INFORMATION Executing test Test_08_SortGroups
+2026-03-08T10:56:28.0917280+00:00 mstest-trace INFORMATION Executed test Test_08_SortGroups
+2026-03-08T10:56:28.0919154+00:00 mstest-trace INFORMATION Executing test Test_09_MergeFinalists
+2026-03-08T10:56:28.0954707+00:00 mstest-trace INFORMATION Executed test Test_09_MergeFinalists
+2026-03-08T10:56:28.0960154+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll

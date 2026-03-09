@@ -1,0 +1,47 @@
+2026-02-15T18:45:00.8079811+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-02-15T18:45:00.8161752+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-02-15T18:45:00.8174334+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-02-15T18:45:00.8174422+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 18:45:00.787
+2026-02-15T18:45:00.8188194+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 11584
+2026-02-15T18:45:00.8189592+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2026-02-15T18:45:00.8189721+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2026-02-15T18:45:00.8189828+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-02-15T18:45:00.8189860+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-15T18:45:00.8191381+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 55615'
+2026-02-15T18:45:00.8200957+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-02-15T18:45:00.8368762+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-02-15T18:45:00.8459552+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-02-15T18:45:00.9549707+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-02-15T18:45:00.9620882+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2026-02-15T18:45:00.9782419+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-02-15T18:45:00.9808841+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-02-15T18:45:01.0045294+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 16 tests from source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-15T18:45:01.0253143+00:00 mstest-trace INFORMATION Created unit-test runner C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-15T18:45:01.0295735+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-02-15T18:45:01.0359693+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-02-15T18:45:01.0985238+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-02-15T18:45:01.1016231+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-02-15T18:45:01.1034941+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-02-15T18:45:01.1035908+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-02-15T18:45:01.1042175+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-02-15T18:45:01.1042668+00:00 mstest-trace INFORMATION Executing test Test_03_PlayMatches
+2026-02-15T18:45:01.1113597+00:00 mstest-trace INFORMATION Executed test Test_03_PlayMatches
+2026-02-15T18:45:01.1114333+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task3.Test_03_PlayMatches failed. ErrorMessage:Сбой Assert.AreEqual. Ожидается: <10>. Фактически: <0>. , ErrorStackTrace:   at Lab7Test.Blue.Task3.CheckStruct(Boolean matchesExpected) in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task3.cs:line 152
+   at Lab7Test.Blue.Task3.Test_03_PlayMatches() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task3.cs:line 79
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-02-15T18:45:01.1115700+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-02-15T18:45:01.1134165+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-02-15T18:45:01.1134476+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task3.Test_04_Sort failed. ErrorMessage:Сбой Assert.AreEqual. Ожидается: <18>. Фактически: <0>. , ErrorStackTrace:   at Lab7Test.Blue.Task3.Test_04_Sort() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task3.cs:line 95
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-02-15T18:45:01.1135017+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-02-15T18:45:01.1150820+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-02-15T18:45:01.1151261+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task3.Test_05_ArrayLinq failed. ErrorMessage:Сбой Assert.AreEqual. Ожидается: <10>. Фактически: <0>. , ErrorStackTrace:   at Lab7Test.Blue.Task3.CheckStruct(Boolean matchesExpected) in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task3.cs:line 152
+   at Lab7Test.Blue.Task3.Test_05_ArrayLinq() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task3.cs:line 106
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-02-15T18:45:01.1153535+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll

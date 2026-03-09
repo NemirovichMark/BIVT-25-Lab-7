@@ -1,0 +1,43 @@
+2026-02-15T14:57:01.3568966+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.6.2+88f8ce447cd12b629fcfe5e61d80dcc0c8cab8ec
+2026-02-15T14:57:01.3760677+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-02-15T14:57:01.3783563+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-02-15T14:57:01.3783644+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 14:57:01.308
+2026-02-15T14:57:01.3812034+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 24312
+2026-02-15T14:57:01.3814342+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.20
+2026-02-15T14:57:01.3814506+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.20\System.Private.CoreLib.dll
+2026-02-15T14:57:01.3814646+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-02-15T14:57:01.3814744+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-15T14:57:01.3818417+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Log --client-port 59149'
+2026-02-15T14:57:01.3840463+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-02-15T14:57:01.4231010+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-02-15T14:57:01.4460095+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-02-15T14:57:01.7089791+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.8.2' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-02-15T14:57:01.7231481+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Сборщики данных Runsettings не поддерживаются в Microsoft.Testing.Platform и будут пропущены
+2026-02-15T14:57:01.7618967+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2026-02-15T14:57:01.7681006+00:00 mstest-trace INFORMATION CollectSourceInformation value found : True 
+2026-02-15T14:57:01.8239428+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 10 tests from source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-15T14:57:01.8776667+00:00 mstest-trace INFORMATION Created unit-test runner C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
+2026-02-15T14:57:01.8872764+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll (Workers: 1, Scope: MethodLevel)
+2026-02-15T14:57:01.9028536+00:00 mstest-trace INFORMATION Executing test Test_00_OOP
+2026-02-15T14:57:01.9771434+00:00 mstest-trace INFORMATION Executed test Test_00_OOP
+2026-02-15T14:57:01.9862333+00:00 mstest-trace INFORMATION Executing test Test_01_Create
+2026-02-15T14:57:01.9903869+00:00 mstest-trace INFORMATION Executed test Test_01_Create
+2026-02-15T14:57:01.9905982+00:00 mstest-trace INFORMATION Executing test Test_02_Init
+2026-02-15T14:57:01.9922561+00:00 mstest-trace INFORMATION Executed test Test_02_Init
+2026-02-15T14:57:01.9924573+00:00 mstest-trace INFORMATION Executing test Test_03_Jumps
+2026-02-15T14:57:02.0139100+00:00 mstest-trace INFORMATION Executed test Test_03_Jumps
+2026-02-15T14:57:02.0140180+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task2.Test_03_Jumps failed. ErrorMessage:Сбой Assert.AreEqual. Ожидается: <2>. Фактически: <5>. , ErrorStackTrace:   at Lab7Test.Blue.Task2.CheckStruct(Boolean jumpsExpected) in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task2.cs:line 158
+   at Lab7Test.Blue.Task2.Test_03_Jumps() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task2.cs:line 77
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-02-15T14:57:02.0143025+00:00 mstest-trace INFORMATION Executing test Test_04_Sort
+2026-02-15T14:57:02.0178973+00:00 mstest-trace INFORMATION Executed test Test_04_Sort
+2026-02-15T14:57:02.0180591+00:00 mstest-trace INFORMATION Executing test Test_05_ArrayLinq
+2026-02-15T14:57:02.0212292+00:00 mstest-trace INFORMATION Executed test Test_05_ArrayLinq
+2026-02-15T14:57:02.0212956+00:00 mstest-trace INFORMATION MSTestExecutor:Test Lab7Test.Blue.Task2.Test_05_ArrayLinq failed. ErrorMessage:Сбой Assert.AreEqual. Ожидается: <2>. Фактически: <5>. , ErrorStackTrace:   at Lab7Test.Blue.Task2.CheckStruct(Boolean jumpsExpected) in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task2.cs:line 158
+   at Lab7Test.Blue.Task2.Test_05_ArrayLinq() in C:\Develop\BIVT-25-Lab-7\Lab7Test\Blue\Task2.cs:line 103
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2026-02-15T14:57:02.0217385+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Develop\BIVT-25-Lab-7\Lab7Test\bin\Debug\net8.0\Lab7Test.dll
