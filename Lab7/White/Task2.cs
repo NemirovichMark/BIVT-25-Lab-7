@@ -58,3 +58,6 @@ public struct Participant
         Console.WriteLine($"{name} {surname} {BestJump}");
     }
 }
+    }
+}
+
