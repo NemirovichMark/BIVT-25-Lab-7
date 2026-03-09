@@ -4,7 +4,9 @@ using System.Linq;
 
 namespace Lab7.White
 {
-    public struct Participant
+ public class Task4
+ {
+     public struct Participant
 {
     private string name;
     private string surname;
@@ -61,4 +63,5 @@ namespace Lab7.White
         Console.WriteLine($"{name} {surname} Score:{TotalScore}");
     }
   }
+}
 }
