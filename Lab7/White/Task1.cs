@@ -2,94 +2,97 @@ using System;
 
 namespace Lab7.White
 {
-    // Структура "Участник соревнований"
-    public struct Participant
+    public class Task1  
     {
-        // Приватные поля (скрыты от прямого доступа)
-        private string surname;      // фамилия
-        private string club;         // название клуба
-        private double firstJump;    // результат первого прыжка
-        private double secondJump;   // результат второго прыжка
-
-        // Конструктор - вызывается при создании участника
-        public Participant(string surname, string club)
+        // Структура "Участник соревнований"
+        public struct Participant
         {
-            this.surname = surname;   // this.surname - поле структуры
-            this.club = club;         // club - параметр конструктора
-            firstJump = 0;             // сначала прыжков нет
-            secondJump = 0;
-        }
+            // Приватные поля (скрыты от прямого доступа)
+            private string surname;      // фамилия
+            private string club;         // название клуба
+            private double firstJump;    // результат первого прыжка
+            private double secondJump;   // результат второго прыжка
 
-        // Свойства только для чтения (можно получить, нельзя изменить)
-        public string Surname
-        {
-            get { return surname; }
-        }
-
-        public string Club
-        {
-            get { return club; }
-        }
-
-        public double FirstJump
-        {
-            get { return firstJump; }
-        }
-
-        public double SecondJump
-        {
-            get { return secondJump; }
-        }
-
-        // Свойство для суммы двух прыжков
-        public double JumpSum
-        {
-            get { return firstJump + secondJump; }
-        }
-
-        // Метод для добавления результата прыжка
-        public void Jump(double result)
-        {
-            if (firstJump == 0)           // если первый прыжок еще не сделан
+            // Конструктор - вызывается при создании участника
+            public Participant(string surname, string club)
             {
-                firstJump = result;        // записываем в первый прыжок
+                this.surname = surname;   // this.surname - поле структуры
+                this.club = club;         // club - параметр конструктора
+                firstJump = 0;             // сначала прыжков нет
+                secondJump = 0;
             }
-            else if (secondJump == 0)      // если первый уже есть
-            {
-                secondJump = result;       // записываем во второй прыжок
-            }
-            // если оба прыжка уже есть - ничего не делаем
-        }
 
-        // Статический метод сортировки массива участников
-        public static void Sort(Participant[] array)
-        {
-            // Пузырьковая сортировка (простая и понятная)
-            for (int i = 0; i < array.Length - 1; i++)
+            // Свойства только для чтения (можно получить, нельзя изменить)
+            public string Surname
             {
-                for (int j = 0; j < array.Length - 1 - i; j++)
+                get { return surname; }
+            }
+
+            public string Club
+            {
+                get { return club; }
+            }
+
+            public double FirstJump
+            {
+                get { return firstJump; }
+            }
+
+            public double SecondJump
+            {
+                get { return secondJump; }
+            }
+
+            // Свойство для суммы двух прыжков
+            public double JumpSum
+            {
+                get { return firstJump + secondJump; }
+            }
+
+            // Метод для добавления результата прыжка
+            public void Jump(double result)
+            {
+                if (firstJump == 0)           // если первый прыжок еще не сделан
                 {
-                    // Сравниваем суммы прыжков
-                    if (array[j].JumpSum < array[j + 1].JumpSum)
+                    firstJump = result;        // записываем в первый прыжок
+                }
+                else if (secondJump == 0)      // если первый уже есть
+                {
+                    secondJump = result;       // записываем во второй прыжок
+                }
+                // если оба прыжка уже есть - ничего не делаем
+            }
+
+            // Статический метод сортировки массива участников
+            public static void Sort(Participant[] array)
+            {
+                // Пузырьковая сортировка (простая и понятная)
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    for (int j = 0; j < array.Length - 1 - i; j++)
                     {
-                        // Меняем местами (по убыванию)
-                        Participant temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        // Сравниваем суммы прыжков
+                        if (array[j].JumpSum < array[j + 1].JumpSum)
+                        {
+                            // Меняем местами (по убыванию)
+                            Participant temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
                     }
                 }
             }
-        }
 
-        // Метод для вывода информации об участнике
-        public void Print()
-        {
-            Console.WriteLine($"Фамилия: {surname}");
-            Console.WriteLine($"Клуб: {club}");
-            Console.WriteLine($"1-й прыжок: {firstJump:F2} м");
-            Console.WriteLine($"2-й прыжок: {secondJump:F2} м");
-            Console.WriteLine($"Сумма: {JumpSum:F2} м");
-            Console.WriteLine(new string('-', 30));
+            // Метод для вывода информации об участнике
+            public void Print()
+            {
+                Console.WriteLine($"Фамилия: {surname}");
+                Console.WriteLine($"Клуб: {club}");
+                Console.WriteLine($"1-й прыжок: {firstJump:F2} м");
+                Console.WriteLine($"2-й прыжок: {secondJump:F2} м");
+                Console.WriteLine($"Сумма: {JumpSum:F2} м");
+                Console.WriteLine(new string('-', 30));
+            }
         }
-    }
-}
+    } // <-- Закрываем класс Task1
+} // <-- Закрываем namespace Lab7.White
