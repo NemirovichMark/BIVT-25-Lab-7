@@ -37,7 +37,7 @@ namespace Lab7.White
             }
         }
 
-        // НУЖНО ДОБАВИТЬ СТРУКТУРУ Team (команда)
+        // Структура Team (команда)
         public struct Team
         {
             private string name;
@@ -45,17 +45,21 @@ namespace Lab7.White
             private int count;
 
             public string Name => name;
+            
+            // НУЖНО ДОБАВИТЬ СВОЙСТВО Matches
+            public Match[] Matches => matches;
 
             public Team(string name)
             {
                 this.name = name;
-                matches = new Match[100]; // максимум 100 матчей
+                matches = new Match[100];
                 count = 0;
             }
 
-            public void AddMatch(Match match)
+            // НУЖНО ДОБАВИТЬ МЕТОД PlayMatch
+            public void PlayMatch(int goals, int misses)
             {
-                matches[count] = match;
+                matches[count] = new Match(goals, misses);
                 count++;
             }
 
@@ -72,7 +76,8 @@ namespace Lab7.White
                 }
             }
 
-            public int GoalDifference
+            // НУЖНО ДОБАВИТЬ СВОЙСТВО TotalDifference
+            public int TotalDifference
             {
                 get
                 {
@@ -85,19 +90,22 @@ namespace Lab7.White
                 }
             }
 
-            public static void Sort(Team[] array)
+            public int GoalDifference => TotalDifference; // для удобства
+
+            // ИСПРАВИТЬ ИМЯ МЕТОДА - должно быть SortTeams
+            public static void SortTeams(Team[] array)
             {
                 Array.Sort(array, (a, b) => 
                 {
                     if (a.TotalScore != b.TotalScore)
                         return b.TotalScore.CompareTo(a.TotalScore);
-                    return b.GoalDifference.CompareTo(a.GoalDifference);
+                    return b.TotalDifference.CompareTo(a.TotalDifference);
                 });
             }
 
             public void Print()
             {
-                Console.WriteLine($"Команда: {name} | Очки: {TotalScore} | Разница: {GoalDifference}");
+                Console.WriteLine($"Команда: {name} | Очки: {TotalScore} | Разница: {TotalDifference}");
             }
         }
     }
