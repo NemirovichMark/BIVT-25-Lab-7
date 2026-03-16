@@ -86,7 +86,6 @@ namespace Lab7.White
                         Console.WriteLine($"{i + 1} Mark: {_marks[i]}");
                     }
                 }
-                Console.WriteLine("------------------------");
 
             }
         }
