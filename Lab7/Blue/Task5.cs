@@ -4,16 +4,13 @@ namespace Lab7.Blue
     {
         public struct Sportsman
         {
-            //polya
             private string _name;
             private string _surname;
             private int _place;
             private int _count;
-            //свойства
             public string Name => _name;
             public string Surname => _surname;
             public int Place => _place;
-            //конструктор
             public Sportsman(string name, string surname)
             {
                 _name = name;
@@ -39,11 +36,11 @@ namespace Lab7.Blue
 
         public struct Team
         {
-            //поля
+           
             private string _name;
             private Sportsman[] _sportsmen;
             private int _count;
-            //свойства
+           
             public string Name => _name;
             public Sportsman[] Sportsmen
             {
@@ -91,14 +88,14 @@ namespace Lab7.Blue
                     return top;
                 }
             }
-            //конструктор
+           
             public Team(string name)
             {
                 _name = name;
                 _sportsmen = new Sportsman[6];
                 _count = 0;
             }
-            //методы
+          
             public void Add(Sportsman sportsman)
             {
                 if (_count >= 6) return;
